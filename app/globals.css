@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lato:wght@300;400;700&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+  
+  /* Theater Brand Colors */
+  --color-primary: #8B1538;
+  --color-secondary: #D4AF37;
+  --color-accent: #2C1810;
+  --color-background: #FEFBF7;
+  --color-surface: #FFFFFF;
+  --color-text: #1A1A1A;
+  --color-text-muted: #666666;
+  --color-border: #E0D5C8;
+  --color-gold-light: #F4D03F;
+  --color-cream: #F5F1E8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0A0A0A;
+}
+
+/* Ensure pages never go behind fixed navbar */
+.page-content {
+  padding-top: 80px;
+}
+
+/* Centered container utility */
+.page-container {
+  max-width: 72rem; /* 1152px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .page-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Gradient utilities */
+.bg-gradient-radial {
+  background-image: radial-gradient(var(--gradient-radius, circle), var(--gradient-color-stop-1), var(--gradient-color-stop-2));
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #1A1A1A;
+  background-color: #FEFBF7;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+}
+
+a {
+  color: #8B1538;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #D4AF37;
+}
+
+::selection {
+  background-color: #8B1538;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F1E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 5px;
+}
+
+/* Theatrical Styling */
+.stage-background {
+  background: linear-gradient(135deg, #0A0A0A 0%, #1A0F2E 50%, #0A0A0A 100%);
+}
+
+.theatrical-curtain {
+  background: linear-gradient(90deg, #6B0F1F 0%, #8B1538 50%, #6B0F1F 100%);
+  background-size: 200% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.curtain-texture {
+  position: relative;
+}
+
+.curtain-texture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, 0.05) 1px,
+      rgba(0, 0, 0, 0.05) 2px
+    );
+  pointer-events: none;
+}
+
+.spotlight {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, rgba(212, 175, 55, 0.2) 30%, rgba(212, 175, 55, 0.05) 70%, transparent 100%);
+  filter: blur(60px);
+  box-shadow: inset 0 -100px 200px rgba(212, 175, 55, 0.2);
+}
+
+.stage-frame {
+  position: relative;
+  border: 3px solid #D4AF37;
+  box-shadow: 
+    0 0 20px rgba(212, 175, 55, 0.3),
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.golden-text-glow {
+  color: #D4AF37;
+  text-shadow: 
+    0 0 10px rgba(212, 175, 55, 0.5),
+    0 0 20px rgba(212, 175, 55, 0.3),
+    0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.theatrical-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.theatrical-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+}
+
+.theatrical-button:hover::before {
+  left: 100%;
+}
+
+.dramatic-heading {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.velvet-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Realistic Velvet Curtain Styles */
+.velvet-curtain {
+  background: linear-gradient(90deg,
+    #3D0710 0%,
+    #5C0B19 8%,
+    #6B0F1F 18%,
+    #7B1428 30%,
+    #8B1538 45%,
+    #9B1C42 52%,
+    #8B1538 58%,
+    #7B1428 70%,
+    #6B0F1F 82%,
+    #5C0B19 92%,
+    #3D0710 100%
+  );
+  position: relative;
+  overflow: visible; /* allow tassels to poke out */
+}
+
+.velvet-curtain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(0, 0, 0, 0.22) 3px,
+      rgba(0, 0, 0, 0.22) 6px,
+      transparent 6px,
+      transparent 10px,
+      rgba(255, 255, 255, 0.04) 10px,
+      rgba(255, 255, 255, 0.04) 12px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.08) 2px,
+      rgba(0, 0, 0, 0.08) 4px
+    );
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.curtain-fold {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 40%, transparent 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.curtain-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, transparent 12%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.curtain-tassel {
+  position: absolute;
+  width: 28px;
+  height: 110px;
+  background: linear-gradient(180deg,
+    #F0C040 0%,
+    #D4AF37 20%,
+    #C9A227 55%,
+    #B8911F 80%,
+    #9A7A18 100%
+  );
+  border-radius: 50% 50% 40% 40%;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow:
+    inset -3px 0 6px rgba(0,0,0,0.35),
+    0 4px 12px rgba(0,0,0,0.4);
+}
+
+.curtain-valance {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: linear-gradient(180deg, #2E060E 0%, #4A0A13 40%, #6B0F1F 80%, transparent 100%);
+  border-radius: 0 0 35px 35px;
+  box-shadow: inset 0 6px 14px rgba(0,0,0,0.5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.stage-dust {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Dark Form Styling */
+.dark-input {
+  background-color: #1A1A2E;
+  border: 2px solid #D4AF37;
+  color: #F5F1E8;
+  transition: all 0.3s ease;
+}
+
+.dark-input::placeholder {
+  color: #999999;
+}
+
+.dark-input:focus {
+  background-color: #242438;
+  border-color: #F4D03F;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  outline: none;
+}
+
+.dark-textarea {
+  background-color: #1A1A2E;
+  border: 2px solid #D4AF37;
+  color: #F5F1E8;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.dark-textarea::placeholder {
+  color: #999999;
+}
+
+.dark-textarea:focus {
+  background-color: #242438;
+  border-color: #F4D03F;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  outline: none;
+}
+
+.dark-label {
+  color: #D4AF37;
+  font-weight: 600;
+}
+
+.dark-card {
+  background: linear-gradient(135deg, #1A1A2E 0%, #242438 100%);
+  border: 2px solid #D4AF37;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
