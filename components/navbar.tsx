@@ -24,23 +24,18 @@ export default function Navbar() {
     { label: 'Contact', href: '/contact' },
   ]
 
-  // Same dark translucent style on ALL pages and ALL scroll states
-  // • Not scrolled → light dark backdrop
-  // • Scrolled     → deeper dark backdrop (no red, keeps theatrical feel)
   const navBg = isScrolled
     ? 'bg-black/85 backdrop-blur-lg shadow-xl border-b border-[#D4AF37]/15'
     : 'bg-black/40 backdrop-blur-md'
 
   const linkClass = 'text-[#D4AF37] hover:text-[#F4D03F]'
-
-  const logoColor = '#D4AF37'   // always gold
-
+  const logoColor = '#D4AF37'
   const adminClass = 'border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/20'
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${navBg}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className="navbar-inner">
+        <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -48,7 +43,7 @@ export default function Navbar() {
               className="text-xl sm:text-2xl font-bold transition-colors dramatic-heading"
               style={{ color: logoColor }}
             >
-              Jadavpur Byatikrom
+              Jadavpur Baytikram
             </span>
           </Link>
 
@@ -87,15 +82,15 @@ export default function Navbar() {
 
         {/* Mobile Dropdown */}
         {isOpen && (
-          <div className="md:hidden bg-[#8B1538] py-4 rounded-b-xl shadow-2xl border-t border-[#D4AF37]/20">
+          <div className="md:hidden bg-black/95 backdrop-blur-lg py-4 rounded-b-xl shadow-2xl border-t border-[#D4AF37]/20">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`block px-6 py-3 font-medium transition-colors hover:bg-[#6B0F2A] ${
+                className={`block px-6 py-3 font-medium transition-colors hover:bg-[#D4AF37]/10 ${
                   pathname === item.href
                     ? 'text-[#D4AF37] font-bold'
-                    : 'text-white'
+                    : 'text-[#D4AF37]/80'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -104,7 +99,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/admin"
-              className="block px-6 py-3 text-[#D4AF37] font-semibold hover:bg-[#6B0F2A] transition-colors"
+              className="block px-6 py-3 text-[#D4AF37] font-semibold hover:bg-[#D4AF37]/10 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Admin

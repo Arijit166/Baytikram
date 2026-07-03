@@ -191,7 +191,7 @@ export default function Hero() {
     hidden: { opacity: 0, scale: 0.85, y: 10 },
     visible: {
       opacity: 1, scale: 1, y: 0,
-      transition: { duration: 0.9, delay: 0.2, ease: 'easeOut' },
+      transition: { duration: 0.9, delay: 0.2, ease: 'easeOut' as const },
     },
   }
 
@@ -199,7 +199,7 @@ export default function Hero() {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1, y: 0,
-      transition: { duration: 0.8, delay: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.8, delay: 0.6, ease: 'easeOut' as const },
     },
   }
 
@@ -207,7 +207,7 @@ export default function Hero() {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1, y: 0,
-      transition: { duration: 0.8, delay: 1.0, ease: 'easeOut' },
+      transition: { duration: 0.8, delay: 1.0, ease: 'easeOut' as const },
     },
   }
 
@@ -229,11 +229,27 @@ export default function Hero() {
       */}
       <section
         className="relative w-full overflow-hidden"
-        style={{
-          height: '100vh',
-          background: 'linear-gradient(135deg, #0A0A0A 0%, #1A0F2E 50%, #0A0A0A 100%)',
-        }}
+        style={{ height: '100vh' }}
       >
+        {/* ── BACKGROUND IMAGE ── */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/landing-page.jpeg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            zIndex: 0,
+          }}
+        />
+        {/* ── DARK OVERLAY so text/spotlights/sparkles stay readable over the image ── */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(10,10,10,0.55) 0%, rgba(26,15,46,0.4) 50%, rgba(10,10,10,0.65) 100%)',
+            zIndex: 1,
+          }}
+        />
         {/* ── STAGE DUST PARTICLES ── */}
         {dustParticles.map((particle) => (
           <motion.div
@@ -416,7 +432,7 @@ export default function Hero() {
                 className="text-5xl sm:text-7xl lg:text-8xl font-bold golden-text-glow dramatic-heading"
                 style={{ letterSpacing: '3px' }}
               >
-                যাদবপুর ব্যতিক্রম
+                Jadavpur Baytikram
               </h1>
               {/* Animated golden underline */}
               <motion.div
@@ -440,7 +456,7 @@ export default function Hero() {
               initial="hidden"
               animate={showContent ? 'visible' : 'hidden'}
             >
-              নাটকের মাধ্যমে সমাজ পরিবর্তনের অঙ্গীকার
+              Our commitment is to achieve the better and newer heights in the field of cultural movement
             </motion.p>
 
             {/* CTA Cards */}
