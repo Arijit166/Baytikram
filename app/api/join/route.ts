@@ -11,10 +11,14 @@ interface JoinFormData {
   email: string
   age: string
   phone: string
+  gender: string
+  profession: string
+  education: string
+  address: string
   reason: string
 }
 
-function buildJoinLetter({ name, email, age, phone, reason }: JoinFormData) {
+function buildJoinLetter({ name, email, age, phone, gender, profession, education, address, reason }: JoinFormData) {
   const dateStr = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })
 
   return new Document({
@@ -39,6 +43,10 @@ function buildJoinLetter({ name, email, age, phone, reason }: JoinFormData) {
         new Paragraph({ spacing: { after: 150 }, children: [new TextRun({ text: 'Email: ', bold: true }), new TextRun(email)] }),
         new Paragraph({ spacing: { after: 150 }, children: [new TextRun({ text: 'Age: ', bold: true }), new TextRun(String(age))] }),
         new Paragraph({ spacing: { after: 150 }, children: [new TextRun({ text: 'Phone Number: ', bold: true }), new TextRun(phone)] }),
+        new Paragraph({ spacing: { after: 150 }, children: [new TextRun({ text: 'Gender: ', bold: true }), new TextRun(gender)] }),
+        new Paragraph({ spacing: { after: 150 }, children: [new TextRun({ text: 'Profession: ', bold: true }), new TextRun(profession)] }),
+        new Paragraph({ spacing: { after: 150 }, children: [new TextRun({ text: 'Education: ', bold: true }), new TextRun(education)] }),
+        new Paragraph({ spacing: { after: 400 }, children: [new TextRun({ text: 'Address: ', bold: true }), new TextRun(address)] }),
         new Paragraph({ spacing: { after: 150 }, children: [new TextRun({ text: 'Reason for Joining:', bold: true })] }),
         new Paragraph({ spacing: { after: 400 }, children: [new TextRun(reason)] }),
         new Paragraph({
@@ -53,13 +61,13 @@ function buildJoinLetter({ name, email, age, phone, reason }: JoinFormData) {
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as Partial<JoinFormData>
-    const { name, email, age, phone, reason } = body
+    const { name, email, age, phone, gender, profession, education, address, reason } = body
 
-    if (!name || !email || !age || !phone || !reason) {
+    if (!name || !email || !age || !phone || !gender || !profession || !education || !address || !reason) {
       return NextResponse.json({ error: 'All fields are required.' }, { status: 400 })
     }
 
-    const doc = buildJoinLetter({ name, email, age, phone, reason })
+    const doc = buildJoinLetter({ name, email, age, phone, gender, profession, education, address, reason })
     const buffer = await Packer.toBuffer(doc)
 
     const {

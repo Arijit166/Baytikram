@@ -8,12 +8,16 @@ interface JoinFormData {
   email: string
   age: string
   phone: string
+  gender: string
+  profession: string
+  education: string
+  address: string
   reason: string
 }
 
 export default function Contact() {
   const [formData, setFormData] = useState<JoinFormData>({
-    name: '', email: '', age: '', phone: '', reason: '',
+    name: '', email: '', age: '', phone: '', gender: '', profession: '', education: '', address: '', reason: '',
   })
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
@@ -24,10 +28,19 @@ export default function Contact() {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
+  const handleGenderSelect = (value: string) => {
+    setFormData(prev => ({ ...prev, gender: value }))
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
     setSubmitting(true)
+    if (!formData.gender) {
+      setError('Please select a gender.')
+      setSubmitting(false)
+      return
+    }
     try {
       const res = await fetch('/api/join', {
         method: 'POST',
@@ -39,7 +52,7 @@ export default function Contact() {
 
       setSubmitted(true)
       setTimeout(() => {
-        setFormData({ name: '', email: '', age: '', phone: '', reason: '' })
+        setFormData({ name: '', email: '', age: '', phone: '', gender: '', profession: '', education: '', address: '', reason: '' })
         setSubmitted(false)
       }, 4000)
     } catch (err) {
@@ -188,7 +201,7 @@ export default function Contact() {
               className="text-2xl sm:text-3xl font-bold golden-text-glow dramatic-heading text-center"
               style={{ letterSpacing: '2px', marginBottom: '15px', marginTop: '1rem' }}
             >
-              JOIN US
+              MEMBERSHIP APPLICATION
             </h2>
             <p className="text-[#D4AF37] text-sm font-light italic text-center leading-loose" style={{ marginBottom: '20px' }}>
               Fill this out to apply for membership — a confirmation letter is generated automatically.
@@ -231,6 +244,45 @@ export default function Contact() {
                     <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required
                       className="dark-input w-full rounded-lg text-sm" style={{ padding: '1rem 1.25rem' }} placeholder="+91 98765 43210" />
                   </div>
+                </div>
+                <div className="flex flex-col gap-2" style={{ marginBottom: '15px' }}>
+                  <label className="dark-label text-xs tracking-widest text-left">GENDER</label>
+                  <div className="flex gap-3 flex-wrap">
+                    {['Male', 'Female', 'Other'].map(option => (
+                      <button
+                        key={option}
+                        type="button"
+                        onClick={() => handleGenderSelect(option)}
+                        className={`flex-1 min-w-[100px] rounded-lg text-sm font-semibold tracking-wide transition-all ${
+                          formData.gender === option
+                            ? 'bg-[#D4AF37] text-[#6B0F1F]'
+                            : 'dark-input text-[#D4AF37]'
+                        }`}
+                        style={{ padding: '0.85rem 1rem' }}
+                      >
+                        {option.toUpperCase()}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-7" style={{ marginBottom: '15px' }}>
+                  <div className="flex flex-col gap-2">
+                    <label className="dark-label text-xs tracking-widest text-left">PROFESSION</label>
+                    <input type="text" name="profession" value={formData.profession} onChange={handleChange} required
+                      className="dark-input w-full rounded-lg text-sm" style={{ padding: '1rem 1.25rem' }} placeholder="Your occupation" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className="dark-label text-xs tracking-widest text-left">EDUCATION</label>
+                    <input type="text" name="education" value={formData.education} onChange={handleChange} required
+                      className="dark-input w-full rounded-lg text-sm" style={{ padding: '1rem 1.25rem' }} placeholder="Highest qualification" />
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-2" style={{ marginBottom: '15px' }}>
+                  <label className="dark-label text-xs tracking-widest text-left">ADDRESS</label>
+                  <input type="text" name="address" value={formData.address} onChange={handleChange} required
+                    className="dark-input w-full rounded-lg text-sm" style={{ padding: '1rem 1.25rem' }} placeholder="Your full address" />
                 </div>
                 <div className="flex flex-col gap-2" style={{ marginBottom: '28px' }}>
                   <label className="dark-label text-xs tracking-widest text-left">WHY WOULD YOU LIKE TO JOIN OUR GROUP?</label>
