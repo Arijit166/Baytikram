@@ -229,13 +229,13 @@ export default function Hero() {
       */}
       <section
         className="relative w-full overflow-hidden"
-        style={{ height: '100vh' }}
+        style={{ height: 'calc(100vh - 80px)' }}
       >
         {/* ── BACKGROUND IMAGE ── */}
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/landing-page.jpeg')",
+            backgroundImage: "url('https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/landing-page.jpeg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             zIndex: 0,
@@ -343,8 +343,6 @@ export default function Hero() {
           initial="closed"
           animate="open"
         >
-          {/* Decorative top valance */}
-          <div className="curtain-valance w-full" />
           {/* Vertical fold shadows */}
           <div className="curtain-fold" style={{ left: '15%', width: '12%' }} />
           <div className="curtain-fold" style={{ left: '40%', width: '18%' }} />
@@ -384,7 +382,6 @@ export default function Hero() {
             className="velvet-curtain w-full h-full"
             style={{ transform: 'scaleX(-1)', position: 'relative' }}
           >
-            <div className="curtain-valance w-full" />
             <div className="curtain-fold" style={{ left: '15%', width: '12%' }} />
             <div className="curtain-fold" style={{ left: '40%', width: '18%' }} />
             <div className="curtain-fold" style={{ left: '65%', width: '10%' }} />

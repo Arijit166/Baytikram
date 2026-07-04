@@ -64,26 +64,26 @@ export default function Contact() {
 
   return (
     <main className="relative min-h-screen overflow-hidden">
-      {/* ── BACKGROUND IMAGE (same as landing page) ── */}
+      {/* ── BACKGROUND IMAGE (starts after navbar) ── */}
       <div
         className="page-bg-image"
-        style={{ backgroundImage: "url('/landing-page.jpeg')" }}
+        style={{ backgroundImage: "url('https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/landing-page.jpeg')" }}
       />
       <div className="page-bg-overlay" />
 
       {/* ── PAGE CONTENT ── */}
-      <div className="relative" style={{ zIndex: 10, paddingTop: '100px', paddingBottom: '100px' }}>
+      <div className="relative" style={{ zIndex: 10, paddingTop: '40px', paddingBottom: '100px' }}>
 
         {/* ─── Page Header ─── */}
         <motion.div
           className="w-full flex flex-col items-center text-center px-4"
-          style={{ marginBottom: '60px' }}
+          style={{ marginBottom: '30px' }}
           initial={{ opacity: 0, y: -24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <h1
-            className="text-5xl lg:text-6xl font-bold golden-text-glow dramatic-heading text-center"
+            className="text-3xl lg:text-5xl font-bold golden-text-glow dramatic-heading text-center"
             style={{ letterSpacing: '3px', marginBottom: '1px' }}
           >
             GET IN TOUCH

@@ -18,22 +18,22 @@ export default function Navbar() {
 
   const navItems = [
     { label: 'Home', href: '/' },
+    { label: 'About Us', href: '/about' },
     { label: 'Productions', href: '/productions' },
-    { label: 'Gallery', href: '/gallery' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'TFD', href: '/tfd' },
+    { label: 'Contact Us', href: '/contact' },
   ]
 
   const navBg = isScrolled
-    ? 'bg-black/85 backdrop-blur-lg shadow-xl border-b border-[#D4AF37]/15'
-    : 'bg-black/40 backdrop-blur-md'
+    ? 'bg-gradient-to-r from-[#5C0B19] via-[#8B1538] to-[#5C0B19] shadow-[0_4px_32px_rgba(139,21,56,0.6)] border-b-2 border-[#D4AF37]'
+    : 'bg-gradient-to-r from-[#5C0B19]/90 via-[#8B1538]/85 to-[#5C0B19]/90 backdrop-blur-md border-b-2 border-[#D4AF37]/70'
 
-  const linkClass = 'text-[#D4AF37] hover:text-[#F4D03F]'
-  const logoColor = '#D4AF37'
+  const linkClass = 'text-[#F0C040] hover:text-[#FFE07A] drop-shadow-[0_1px_6px_rgba(212,175,55,0.5)]'
+  const logoColor = '#F0C040'
   const adminClass = 'border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/20'
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${navBg}`}>
+    <nav className={`sticky top-0 w-full z-50 transition-all duration-500 ${navBg}`}>
       <div className="navbar-inner">
         <div className="flex items-center justify-between h-20">
 
@@ -62,12 +62,6 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/admin"
-              className={`text-sm font-semibold px-4 py-1.5 rounded border-2 transition-all duration-300 ${adminClass}`}
-            >
-              Admin
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,13 +91,6 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/admin"
-              className="block px-6 py-3 text-[#D4AF37] font-semibold hover:bg-[#D4AF37]/10 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Admin
-            </Link>
           </div>
         )}
       </div>

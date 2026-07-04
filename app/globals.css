@@ -105,14 +105,25 @@ h3 {
   font-size: 1.875rem;
 }
 
-a {
+a:not(.navbar-link) {
   color: #8B1538;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:hover {
+a:not(.navbar-link):hover {
   color: #D4AF37;
+}
+
+/* Navbar links — prevent global anchor rule from overriding Tailwind classes */
+.navbar-inner a {
+  color: #F0C040;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-inner a:hover {
+  color: #FFE07A;
 }
 
 ::selection {
@@ -326,7 +337,6 @@ a:hover {
   right: 0;
   height: 70px;
   background: linear-gradient(180deg, #2E060E 0%, #4A0A13 40%, #6B0F1F 80%, transparent 100%);
-  border-radius: 0 0 35px 35px;
   box-shadow: inset 0 6px 14px rgba(0,0,0,0.5);
   pointer-events: none;
   z-index: 5;
