@@ -56,7 +56,7 @@ export default function About() {
           </h2>
           <div className="w-full space-y-7 text-gray-300 text-lg text-center leading-[1.9]">
             <p className="text-center">
-              Jadavpur Byatikrom was founded with a vision to revolutionize theatre in Bengal through experimental and innovative approaches. For over a decade, we have been pushing the boundaries of traditional theatre, creating performances that challenge, inspire, and transform audiences.
+              Jadavpur Baytikram was founded with a vision to revolutionize theatre in Bengal through experimental and innovative approaches. For over a decade, we have been pushing the boundaries of traditional theatre, creating performances that challenge, inspire, and transform audiences.
             </p>
             <p className="text-center">
               Our commitment extends beyond the stage. We are deeply invested in community engagement, cultural preservation, and fostering the next generation of theatrical artists through workshops, residencies, and outreach programmes.

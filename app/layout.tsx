@@ -3,8 +3,8 @@ import './globals.css'
 import Navbar from '@/components/navbar'
 
 export const metadata: Metadata = {
-  title: 'Jadavpur Byatikrom | Experimental Theatre Group',
-  description: 'Discover the world of experimental Bengali theatre with Jadavpur Byatikrom. Productions, gallery, and cultural initiatives.',
+  title: 'Jadavpur Baytikram | Experimental Theatre Group',
+  description: 'Discover the world of experimental Bengali theatre with Jadavpur Baytikram. Productions, gallery, and cultural initiatives.',
   generator: 'v0.app',
   icons: {
     icon: '/favicon.ico',

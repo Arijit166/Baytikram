@@ -6,12 +6,20 @@ import { motion } from 'framer-motion'
 export default function TheatreForDevelopment() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      {/* ── BACKGROUND IMAGE (starts after navbar) ── */}
+      {/* ── BACKGROUND IMAGE (fixed, viewport-relative) ── */}
       <div
         className="page-bg-image"
         style={{ backgroundImage: "url('https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/landing-page.jpeg')" }}
       />
       <div className="page-bg-overlay" />
+
+      {/* ── SPOTLIGHT BEAMS (theatre stage effect) ── */}
+      <div className="page-spotlights">
+        <div className="page-spotlight-left" />
+        <div className="page-spotlight-center" />
+        <div className="page-spotlight-right" />
+        <div className="page-spotlight-glow" />
+      </div>
 
       {/* ── PAGE CONTENT ── */}
       <div className="relative flex flex-col items-center" style={{ zIndex: 10, paddingTop: '40px', paddingBottom: '120px' }}>
