@@ -52,7 +52,7 @@ export default function TheatreForDevelopment() {
           <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
 
             {/* Awareness Program */}
-            <Link href="/tfd/awareness-program" className="w-full h-full">
+            <Link href="/tfd/awareness" className="w-full h-full">
               <motion.div
                 className="h-full dark-card rounded-2xl flex flex-col items-center text-center cursor-pointer"
                 style={{ padding: '3rem 3rem 2rem 3rem', justifyContent: 'space-between' }}
