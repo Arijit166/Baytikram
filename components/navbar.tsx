@@ -19,7 +19,7 @@ export default function Navbar() {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
-    { label: 'Productions', href: '/productions' },
+    { label: 'Activities', href: '/activities' },
     { label: 'TFD', href: '/tfd' },
     { label: 'Contact Us', href: '/contact' },
   ]

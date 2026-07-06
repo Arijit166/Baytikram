@@ -214,45 +214,41 @@ export default function Workshop() {
               >
                 <h3
                   className="text-xl font-bold golden-text-glow dramatic-heading text-left"
-                  style={{ letterSpacing: '1px', marginBottom: '18px' }}
+                  style={{ letterSpacing: '1px', marginBottom: '24px' }}
                 >
                   NON-RESIDENTIAL WORKSHOPS
                 </h3>
-                <p className="text-[#D4AF37] text-sm italic text-left" style={{ marginBottom: '18px' }}>
-                  Primarily for City People
-                </p>
                 <div className="flex flex-col gap-4" style={{ marginBottom: '22px' }}>
                   <div>
                     <p className="text-[#D4AF37]/80 text-xs font-semibold tracking-widest text-left" style={{ marginBottom: '6px' }}>
-                      TARGET AUDIENCE
+                      HOW IT WORKS
                     </p>
                     <p className="text-gray-300 text-sm text-left leading-[1.9]">
-                      Urban students, corporate professionals, and city dwellers with tight, clock-bound
-                      routines.
+                      Participants do not stay overnight at the venue. They attend the workshop
+                      during the day and return home or to their own accommodation each evening.
                     </p>
                   </div>
                   <div>
                     <p className="text-[#D4AF37]/80 text-xs font-semibold tracking-widest text-left" style={{ marginBottom: '6px' }}>
-                      STRUCTURE
+                      INCLUSIONS
                     </p>
                     <p className="text-gray-300 text-sm text-left leading-[1.9]">
-                      Conducted for a few hours daily, or exclusively on weekends over a stretched
-                      duration, allowing participants to commute from home.
+                      Tea, snacks, or lunch may be provided during sessions, but accommodation
+                      is not included.
                     </p>
                   </div>
                   <div>
                     <p className="text-[#D4AF37]/80 text-xs font-semibold tracking-widest text-left" style={{ marginBottom: '6px' }}>
-                      IMPACT
+                      EXAMPLE
                     </p>
                     <p className="text-gray-300 text-sm text-left leading-[1.9]">
-                      Addresses urban alienation, mental stress, and fast-paced societal challenges without
-                      disrupting the participants&apos; daily livelihood or education &mdash; teaching city folks
-                      to utilize community spaces for artistic expression.
+                      A 3-day theatre workshop from 10:00 AM to 5:00 PM — every evening,
+                      participants return home.
                     </p>
                   </div>
                 </div>
                 <img
-                  src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/workshop/non-residential.jpeg"
+                  src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/workshop/residential.jpeg"
                   alt="Non-Residential Workshop"
                   className="w-full aspect-[4/3] object-cover rounded-2xl"
                   style={{ marginTop: 'auto' }}
@@ -268,45 +264,43 @@ export default function Workshop() {
               >
                 <h3
                   className="text-xl font-bold golden-text-glow dramatic-heading text-left"
-                  style={{ letterSpacing: '1px', marginBottom: '18px' }}
+                  style={{ letterSpacing: '1px', marginBottom: '24px' }}
                 >
                   RESIDENTIAL WORKSHOPS
                 </h3>
-                <p className="text-[#D4AF37] text-sm italic text-left" style={{ marginBottom: '18px' }}>
-                  Primarily for Village People &amp; Intensive Training
-                </p>
                 <div className="flex flex-col gap-4" style={{ marginBottom: '22px' }}>
                   <div>
                     <p className="text-[#D4AF37]/80 text-xs font-semibold tracking-widest text-left" style={{ marginBottom: '6px' }}>
-                      TARGET AUDIENCE
+                      HOW IT WORKS
                     </p>
                     <p className="text-gray-300 text-sm text-left leading-[1.9]">
-                      Rural youth, folk artists, and core change-makers who require an immersive
-                      environment.
+                      Participants stay at the workshop venue or nearby accommodation for the
+                      entire duration. Activities may continue into the evenings, allowing for
+                      deeper, more immersive learning.
                     </p>
                   </div>
                   <div>
                     <p className="text-[#D4AF37]/80 text-xs font-semibold tracking-widest text-left" style={{ marginBottom: '6px' }}>
-                      STRUCTURE
+                      INCLUSIONS
                     </p>
                     <p className="text-gray-300 text-sm text-left leading-[1.9]">
-                      A fully immersive bootcamp format, typically lasting 5 to 15 days, where participants
-                      live, eat, and breathe theatre together under one roof.
+                      Accommodation and meals are usually included, with participants living
+                      together throughout the programme.
                     </p>
                   </div>
                   <div>
                     <p className="text-[#D4AF37]/80 text-xs font-semibold tracking-widest text-left" style={{ marginBottom: '6px' }}>
-                      IMPACT
+                      EXAMPLE
                     </p>
                     <p className="text-gray-300 text-sm text-left leading-[1.9]">
-                      Continuous cohabitation fosters a deep sense of brotherhood, breaking down barriers
-                      of caste or class &mdash; blending modern theatrical tools with traditional folk media for
-                      a highly concentrated impact on village communities.
+                      A 7-day theatre camp where participants live together in a hostel or
+                      dormitory &mdash; with morning warm-ups, daytime rehearsals, evening
+                      performances, and group discussions.
                     </p>
                   </div>
                 </div>
                 <img
-                  src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/workshop/residential.jpeg"
+                  src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/workshop/non-residential.jpeg"
                   alt="Residential Workshop"
                   className="w-full aspect-[4/3] object-cover rounded-2xl"
                   style={{ marginTop: 'auto' }}
