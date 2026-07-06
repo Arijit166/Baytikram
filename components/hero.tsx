@@ -448,7 +448,7 @@ export default function Hero() {
             {/* Bengali Subtitle */}
             <motion.p
               className="text-base sm:text-xl text-[#D4AF37] font-light italic leading-loose max-w-2xl"
-              style={{ marginBottom: '25px' }}
+              style={{ marginBottom: '42px' }}
               variants={subtitleVariants}
               initial="hidden"
               animate={showContent ? 'visible' : 'hidden'}
@@ -458,40 +458,46 @@ export default function Hero() {
 
             {/* CTA Cards */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center w-full max-w-3xl"
+              className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-stretch w-full max-w-3xl"
               variants={ctaVariants}
               initial="hidden"
               animate={showContent ? 'visible' : 'hidden'}
             >
               {/* Productions Card */}
-              <Link href="/productions" className="w-full sm:w-auto">
+              <Link href="/activities/productions" className="w-full sm:w-auto sm:flex-1">
                 <motion.div
-                  className="dark-card px-6 py-8 sm:px-8 sm:py-10 rounded-lg w-full sm:min-w-64 cursor-pointer"
+                  className="dark-card px-6 py-8 sm:px-8 sm:py-10 rounded-lg w-full h-full cursor-pointer flex flex-col"
                   whileHover={{ boxShadow: '0 16px 50px rgba(212,175,55,0.45)' }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="text-5xl sm:text-6xl mb-4">🎭</div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-[#D4AF37] mb-3 dramatic-heading">
+                  <div className="text-5xl sm:text-6xl" style={{ marginBottom: '16px' }}>🎭</div>
+                  <h3
+                    className="text-2xl sm:text-3xl font-bold text-[#D4AF37] dramatic-heading"
+                    style={{ marginBottom: '12px', minHeight: '4rem' }}
+                  >
                     PRODUCTIONS
                   </h3>
-                  <p className="text-[#D4AF37] text-sm leading-relaxed font-light">
+                  <p className="text-[#D4AF37] text-sm leading-relaxed font-light" style={{ marginTop: '11px', marginBottom: '12px' }}>
                     Explore our theatrical masterpieces and experimental productions that challenge conventions
                   </p>
                 </motion.div>
               </Link>
 
-              {/* NGO Card */}
-              <Link href="/" className="w-full sm:w-auto">
+              {/* TFD Card */}
+              <Link href="/tfd" className="w-full sm:w-auto sm:flex-1">
                 <motion.div
-                  className="dark-card px-6 py-8 sm:px-8 sm:py-10 rounded-lg w-full sm:min-w-64 cursor-pointer"
+                  className="dark-card px-6 py-8 sm:px-8 sm:py-10 rounded-lg w-full h-full cursor-pointer flex flex-col"
                   whileHover={{ boxShadow: '0 16px 50px rgba(212,175,55,0.45)' }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="text-5xl sm:text-6xl mb-4">❤️</div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-[#D4AF37] mb-3 dramatic-heading">
-                    NGO INITIATIVES
+                  <div className="text-5xl sm:text-6xl" style={{ marginBottom: '16px' }}>❤️</div>
+                  <h3
+                    className="text-2xl sm:text-3xl font-bold text-[#D4AF37] dramatic-heading"
+                    style={{ marginBottom: '12px', minHeight: '4rem' }}
+                  >
+                    Theatre for Development (TFD)
                   </h3>
-                  <p className="text-[#D4AF37] text-sm leading-relaxed font-light">
+                  <p className="text-[#D4AF37] text-sm leading-relaxed font-light" style={{ marginTop: '4px', marginBottom: '12px' }}>
                     Discover our social impact programs and community engagement in theatre education
                   </p>
                 </motion.div>

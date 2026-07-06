@@ -2,105 +2,125 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import AdminDashboard from '@/components/admin-dashboard'
 
 export default function Admin() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [passkey, setPasskey] = useState('')
   const [error, setError] = useState('')
+  const [submitting, setSubmitting] = useState(false)
 
-  const ADMIN_PASSKEY = process.env.NEXT_PUBLIC_ADMIN_PASSKEY || 'admin2024'
-
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (passkey === ADMIN_PASSKEY) {
+    setError('')
+    setSubmitting(true)
+    try {
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ passkey }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error || 'Invalid passkey')
+
+      window.location.href = 'https://baytikram.vercel.app/activities'
+
       setIsAuthenticated(true)
-      setError('')
       setPasskey('')
-      console.log('[v0] Admin login successful')
-    } else {
-      setError('Invalid passkey')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong.')
       setPasskey('')
-      console.log('[v0] Admin login failed')
+    } finally {
+      setSubmitting(false)
     }
   }
 
-  if (isAuthenticated) {
-    return <AdminDashboard onLogout={() => setIsAuthenticated(false)} />
-  }
-
   return (
-    <main className="pt-24 pb-12 min-h-screen flex items-center justify-center px-4" style={{
-      background: 'linear-gradient(135deg, #0A0A0A 0%, #1A0F2E 50%, #0A0A0A 100%)',
-    }}>
-      <motion.div
-        className="w-full max-w-md"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
+    <main className="relative min-h-screen overflow-hidden">
+      {/* ── BACKGROUND IMAGE (fixed, viewport-relative) ── */}
+      <div
+        className="page-bg-image"
+        style={{ backgroundImage: "url('https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/landing-page.jpeg')" }}
+      />
+      <div className="page-bg-overlay" />
+
+      {/* ── SPOTLIGHT BEAMS (theatre stage effect) ── */}
+      <div className="page-spotlights">
+        <div className="page-spotlight-left" />
+        <div className="page-spotlight-center" />
+        <div className="page-spotlight-right" />
+        <div className="page-spotlight-glow" />
+      </div>
+
+      {/* ── PAGE CONTENT ── */}
+      <div
+        className="relative flex items-center justify-center min-h-screen px-4"
+        style={{ zIndex: 10, paddingTop: '40px', paddingBottom: '100px' }}
       >
-        <div className="dark-card rounded-lg p-8">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold golden-text-glow mb-2 dramatic-heading">
+        <motion.div
+          className="w-full max-w-md"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="dark-card rounded-2xl p-10 sm:p-16 shadow-2xl">
+            <h1
+              className="text-2xl sm:text-3xl font-bold golden-text-glow dramatic-heading text-center"
+              style={{ letterSpacing: '2px', marginBottom: '15px', marginTop: '1rem' }}
+            >
               ADMIN PORTAL
             </h1>
-            <p className="text-[#D4AF37] font-light">Enter passkey to continue</p>
-          </div>
-
-          {/* Divider */}
-          <div className="velvet-divider mb-8" />
-
-          {/* Login Form */}
-          <form onSubmit={handleLogin} className="space-y-6">
-            {/* Passkey Input */}
-            <div>
-              <label className="dark-label block text-sm mb-2">
-                Passkey
-              </label>
-              <input
-                type="password"
-                value={passkey}
-                onChange={(e) => {
-                  setPasskey(e.target.value)
-                  setError('')
-                }}
-                className="dark-input w-full px-4 py-3 rounded"
-                placeholder="Enter admin passkey"
-              />
-            </div>
-
-            {/* Error Message */}
-            {error && (
-              <motion.div
-                className="bg-red-900/20 border border-red-700 text-red-400 px-4 py-3 rounded"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-              >
-                {error}
-              </motion.div>
-            )}
-
-            {/* Login Button */}
-            <button
-              type="submit"
-              className="w-full bg-[#D4AF37] text-[#6B0F1F] font-bold py-3 rounded hover:bg-[#F4D03F] transition-all theatrical-button"
+            <p
+              className="text-[#D4AF37] text-sm font-light italic text-center leading-loose"
+              style={{ marginBottom: '20px' }}
             >
-              LOGIN
-            </button>
-          </form>
+              Enter your passkey to access the dashboard.
+            </p>
 
-          {/* Divider */}
-          <div className="velvet-divider my-6" />
+            <form
+              onSubmit={handleLogin}
+              className="flex flex-col"
+              style={{ paddingLeft: '0.75rem', paddingRight: '0.75rem' }}
+            >
+              <div className="flex flex-col gap-2" style={{ marginBottom: '15px' }}>
+                <label className="dark-label text-xs tracking-widest text-left">PASSKEY</label>
+                <input
+                  type="password"
+                  value={passkey}
+                  onChange={(e) => {
+                    setPasskey(e.target.value)
+                    setError('')
+                  }}
+                  required
+                  className="dark-input w-full rounded-lg text-sm"
+                  style={{ padding: '1rem 1.25rem' }}
+                  placeholder="Enter admin passkey"
+                />
+              </div>
 
-          {/* Info */}
-          <div className="text-center">
-            <p className="text-xs text-[#999999]">
+              {error && (
+                <p className="text-sm text-center" style={{ color: '#FF6B6B', marginBottom: '15px' }}>
+                  {error}
+                </p>
+              )}
+
+              <button
+                type="submit"
+                disabled={submitting}
+                className="w-full bg-[#D4AF37] text-[#6B0F1F] font-bold rounded-xl hover:bg-[#F4D03F] transition-all theatrical-button tracking-widest text-sm shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
+                style={{ paddingTop: '1.25rem', paddingBottom: '1.25rem', marginTop: '0.5rem', marginBottom: '1rem' }}
+              >
+                {submitting ? 'VERIFYING...' : 'LOGIN'}
+              </button>
+            </form>
+
+            <div className="velvet-divider" style={{ marginTop: '10px', marginBottom: '20px' }} />
+
+            <p className="text-xs text-center text-[#999999]" style={{ marginBottom: '10px' }}>
               Admin access only. Unauthorized access prohibited.
             </p>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </main>
   )
 }
