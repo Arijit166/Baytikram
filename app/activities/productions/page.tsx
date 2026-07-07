@@ -217,7 +217,7 @@ const productions = [
       "This play is crafted in the style of street theatre, centering on the Indian Constitution and its impact on the lives of ordinary people. During the performance, administrative authorities intervene to monitor the proceedings, causing the narrative to shift; the core truth remains elusive, and whenever the real issue does surface, the dramatic action dissolves into farce. Corruption has become an inevitable part of social life—something none of us can escape, whether we wish to or not. Yet, this play seeks to explore the terrifying implications this unchecked corruption holds for future generations.",
     actors:
       'Prabir Dey, Dipankar Banerjee, Astik Naiya, Arkan Banerjee, Arko Das, Sanjoy Das, Deba Roy, Gracy Chakraborty, Akash Roy.',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/17%20Durniti%20Darpan.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Durniti%20Darpan%20F%2017.jpg.jpeg',
   },
   {
     id: 18,

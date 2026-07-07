@@ -128,7 +128,7 @@ export default function Festivals() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
               <div className="lg:col-span-2 lg:order-1 order-2">
                 <img
-                  src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festival/antaranga-intimate.jpeg"
+                  src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festivals/Festival%205.jpeg"
                   alt="Antaranga Intimate Theatre Festival"
                   className="w-full aspect-[3/3] object-cover rounded-2xl"
                 />
@@ -179,12 +179,12 @@ export default function Festivals() {
                 className="w-full sm:col-span-2 aspect-[4/3] object-cover rounded-2xl"
               />
               <img
-                src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festival/gallery-3.jpeg"
+                src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festivals/Festival%202.jpeg"
                 alt="Festival Moment 3"
                 className="w-full sm:col-span-2 aspect-[16/10] object-cover rounded-2xl"
               />
               <img
-                src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festival/gallery-4.jpeg"
+                src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festivals/Festival6.jpeg"
                 alt="Festival Moment 4"
                 className="w-full sm:col-span-2 aspect-[16/10] object-cover rounded-2xl"
               />
