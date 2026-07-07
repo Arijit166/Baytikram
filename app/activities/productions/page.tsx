@@ -39,7 +39,7 @@ const productions = [
     synopsis:
       "Karna and Kunti are two figures from the Mahabharata, bound by the ties of mother and son. Karna was cast adrift in the waters at birth because Kunti had conceived him while still unwed. As time passed, that very son returned as an adversary, facing her other five sons in a great war. On the eve of the battle with Arjuna, Kunti came forward to assert her maternal claim and sought to take away his protective armor; knowing full well that this would mean his death, Karna nonetheless surrendered it to his mother. The struggle faced by mothers of illegitimate children remains just as relevant in society today; the crowded abortion clinics bear witness to this. Driven by the fear of social stigma, a mother may terminate the pregnancy or abandon the newborn in a trash bin. This forms the central theme of the play.",
     actors: 'Deba Roy, Puja Roy',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/placeholder-03.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/3%20karna%20kunti%20sangbad.jpeg',
   },
   {
     id: 4,
@@ -63,7 +63,7 @@ const productions = [
       "Bisho is a man living on the margins of society. His household consists of his wife, Sohagi, and their daughter, Bona. His wife works as a domestic helper in other people's homes, while Bisho works as a manual laborer. Their young daughter, Bona, does not go to school; instead, she spends her days wandering about. Her father is addicted to 'bidi', and she often picks up discarded 'bidi' butts—partially smoked and tossed away by others—from the roadside. His wife is unable to go to work due to illness and can barely eat; the entire family has gone without food for three days. Bisho searches for work but finds none; eventually, hoping for a meal, he runs errands at a tea stall, yet the shopkeeper gives him nothing. Upon returning home, he finds that Bona has scavenged some rice from a dumping ground for his parents; they eat the food, and after consuming the stale meal, they all vomit and die...",
     actors:
       'Chanchal Kar, Tapati Paul , Rumi Bose, Debesh Sarkar, Sanjoy Saha, Niranjan Mondal, Pinku Saha, Soma Roy, Sipra Paul. Payel Das, Sukanta Seal.',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/placeholder-05.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Bhat%20Poster.jpeg',
   },
   {
     id: 6,
@@ -93,7 +93,7 @@ const productions = [
     id: 8,
     titleEn: 'Pharrheziasth',
     titleBn: 'ফারেজিয়াস্ত',
-    year: '',
+    year: '2006',
     credits: ['Written and Directed by Tamal Bose', 'Advisor and Acting- Deba Roy'],
     synopsis:
       "Pharrheziasth is a professor who does not fear confronting the truth. Civil society once seeks to interview such a man. In the course of this interview, Pharrheziasth answers every question with complete candor. However, not everyone appreciates the truth, and death begins to loom over his life...",
@@ -112,7 +112,7 @@ const productions = [
     synopsis:
       "The protagonist of this play is a dog. The play portrays human society and politics from the dog's perspective. The dog closely observes the behavior of people across various social strata and the prevailing class disparities. It highlights the tendency to fawn over the wealthy and powerful while neglecting the poor and helpless. Through the eyes of the dog, the way society bows down to money is depicted using a blend of humor and sharp wit.",
     actors: 'Sanjoy Dutta, Deba Roy, Astik Naiya, Sonali Paul, Dinobondhu Naiya,',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/placeholder-09.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/bite.jpeg',
   },
   {
     id: 10,
@@ -124,7 +124,7 @@ const productions = [
       "God has descended from the heavens into a canal-side slum. Banka, a laborer from the slum, encounters God while returning home late at night in a drunken stupor; unable to believe his eyes, he unleashes a torrent of vile abuse. Meanwhile, hearing the commotion, some local youths rush to the scene. However, before the situation can escalate further, God falls into the clutches of Banka's formidable wife. Eventually, she is convinced of His true identity, and everyone gathers to ask this God for various boons... at one point... God conducts a survey and returns to heaven. Did the people of that slum really receive a boon?",
     actors:
       'Deba Roy, Soma Mukherjee, Sonali Paul, Astik Naiya, Debesh, Pradip Saha, Mousumi Mitra,',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/placeholder-10.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/10%20bhagaban%20Dot%20Dot.jpeg',
   },
   {
     id: 11,
@@ -136,7 +136,7 @@ const productions = [
       "Ran, the beloved grandson of a wealthy family, lives with his grandparents. When Ran is suddenly kidnapped, his grandparents are devastated. The kidnappers demand a ransom, pressuring the grandfather to bring his grandson back at any cost. As the grandfather cool-headedly unravels the mystery behind the kidnapping and confronts the truth, he makes a shocking discovery: the culprit is someone from within their own inner circle.",
     actors:
       'Debesh Sarkar, Gouresh Sarkar, Sarbojit Roy, Sourav Majumder, Ganesh Kumar, Rony, Debangi Mitra, Soma Mukherjee, Deba Roy,',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/placeholder-11.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Kidnap%20Kando.jpeg',
   },
   {
     id: 12,
@@ -148,7 +148,7 @@ const productions = [
       "A real estate broker elevates his social status through the business of buying and selling properties, often using cunning tactics to close deals with clients. His fortunes take a dramatic turn when he receives a call from a foreign queen wishing to purchase the entire country. Overjoyed and overwhelmed, he is dazzled by the prospect of such a massive windfall—an opportunity beyond his wildest dreams. However, the very next moment, a realization dawns on him: if the entire country is sold off, where will he live? The play concludes amidst this dilemma.",
     actors:
       'Sanjoy Dutta, Subrata Ghosh, Kanai Ray, Astok Naiya, Soma Mukherjee, Dinobondhu Naiya , Rita Dolui, Deba Roy.',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/placeholder-12.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/12%202973190.jpeg',
   },
   {
     id: 13,
@@ -217,7 +217,7 @@ const productions = [
       "This play is crafted in the style of street theatre, centering on the Indian Constitution and its impact on the lives of ordinary people. During the performance, administrative authorities intervene to monitor the proceedings, causing the narrative to shift; the core truth remains elusive, and whenever the real issue does surface, the dramatic action dissolves into farce. Corruption has become an inevitable part of social life—something none of us can escape, whether we wish to or not. Yet, this play seeks to explore the terrifying implications this unchecked corruption holds for future generations.",
     actors:
       'Prabir Dey, Dipankar Banerjee, Astik Naiya, Arkan Banerjee, Arko Das, Sanjoy Das, Deba Roy, Gracy Chakraborty, Akash Roy.',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/placeholder-17.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/17%20Durniti%20Darpan.jpeg',
   },
   {
     id: 18,
@@ -267,7 +267,7 @@ const productions = [
       'A psychiatrist conducts research on the human mind at a mental health treatment center, where he treats a constant stream of new patients and conducts experiments on them. Amidst the dramatic setting, various characters appear and share their stories, forcing him to bear the weight of their anguish. Unable to fathom the depths of that suffering, the doctor grows weary, and depression eventually consumes him as well.',
     actors:
       'Deba Roy, Arkan Banerjee, Sanjoy Das, Rahul Das, Kuntal Paul, Sankar Bhakta, Rathi Roy, Swagata , Prerona Chowdhuri, Tani Paul,',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/placeholder-21.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/poster%20mon%20paboner%20nao.jpeg',
   },
 ]
 
