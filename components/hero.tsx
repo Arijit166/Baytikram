@@ -229,7 +229,7 @@ export default function Hero() {
       */}
       <section
         className="relative w-full overflow-hidden"
-        style={{ height: 'calc(100vh - 80px)' }}
+        style={{ minHeight: 'calc(100vh - 80px)' }}
       >
         {/* ── BACKGROUND IMAGE ── */}
         <div
@@ -280,7 +280,7 @@ export default function Hero() {
             Starts fully covering the left half, then slides off to the left.
         ══════════════════════════════════════════════════════════════ */}
         <motion.div
-          className="absolute top-0 left-0 h-full velvet-curtain"
+          className="!absolute top-0 left-0 h-full velvet-curtain"
           style={{ width: '50%', zIndex: 40 }}
           variants={leftCurtainVariants}
           initial="closed"
@@ -350,8 +350,8 @@ export default function Hero() {
             accounting for the 80px fixed navbar at the top.
         ══════════════════════════════════════════════════════════════ */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center text-center"
-          style={{ paddingTop: '80px', zIndex: 10 }}
+          className="relative flex flex-col items-center justify-center text-center w-full"
+          style={{ minHeight: 'calc(100vh - 80px)', paddingTop: '80px', paddingBottom: '40px', zIndex: 10 }}
         >
           <motion.div
             className="w-full px-4 sm:px-6 lg:px-8 flex flex-col items-center"
@@ -416,7 +416,7 @@ export default function Hero() {
                   <div className="text-5xl sm:text-6xl" style={{ marginBottom: '16px' }}>🎭</div>
                   <h3
                     className="text-2xl sm:text-3xl font-bold text-[#D4AF37] dramatic-heading"
-                    style={{ marginBottom: '12px', minHeight: '4rem' }}
+                    style={{ marginBottom: '12px' }}
                   >
                     PRODUCTIONS
                   </h3>
@@ -436,7 +436,7 @@ export default function Hero() {
                   <div className="text-5xl sm:text-6xl" style={{ marginBottom: '16px' }}>❤️</div>
                   <h3
                     className="text-2xl sm:text-3xl font-bold text-[#D4AF37] dramatic-heading"
-                    style={{ marginBottom: '12px', minHeight: '4rem' }}
+                    style={{ marginBottom: '12px' }}
                   >
                     Theatre for Development (TFD)
                   </h3>

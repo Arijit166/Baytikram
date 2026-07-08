@@ -16,6 +16,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Force scroll to top on route change to fix Next.js scroll restoration
+  // issues with framer-motion page transitions/animations
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    setIsOpen(false) // also close mobile menu just in case
+  }, [pathname])
+
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
@@ -24,9 +31,8 @@ export default function Navbar() {
     { label: 'Contact Us', href: '/contact' },
   ]
 
-  const navBg = isScrolled
-    ? 'bg-gradient-to-r from-[#5C0B19] via-[#8B1538] to-[#5C0B19] shadow-[0_4px_32px_rgba(139,21,56,0.6)] border-b-2 border-[#D4AF37]'
-    : 'bg-gradient-to-r from-[#5C0B19]/90 via-[#8B1538]/85 to-[#5C0B19]/90 backdrop-blur-md border-b-2 border-[#D4AF37]/70'
+  // Always use solid dark red background for consistency across all pages
+  const navBg = 'bg-gradient-to-r from-[#5C0B19] via-[#8B1538] to-[#5C0B19] shadow-[0_4px_32px_rgba(139,21,56,0.6)] border-b-2 border-[#D4AF37]'
 
   const linkClass = 'text-[#F0C040] hover:text-[#FFE07A] drop-shadow-[0_1px_6px_rgba(212,175,55,0.5)]'
   const logoColor = '#F0C040'

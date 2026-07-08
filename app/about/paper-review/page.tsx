@@ -68,7 +68,7 @@ export default function PaperReviewPage() {
           transition={{ duration: 0.8 }}
         >
           <h1
-            className="text-5xl lg:text-6xl font-bold golden-text-glow dramatic-heading text-center"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold golden-text-glow dramatic-heading text-center"
             style={{ letterSpacing: '3px', marginBottom: '1px' }}
           >
             PAPER REVIEWS
@@ -114,10 +114,9 @@ export default function PaperReviewPage() {
               transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
             >
               <div
-                className="w-full flex items-center justify-center"
+                className="w-full flex items-center justify-center h-[300px] sm:h-[400px] lg:h-[520px]"
                 style={{
                   position: 'relative',
-                  height: '520px',
                   background: 'rgba(0,0,0,0.35)',
                   borderBottom: '1.5px solid rgba(212,175,55,0.35)',
                 }}

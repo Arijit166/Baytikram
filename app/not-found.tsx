@@ -29,7 +29,7 @@ export default function NotFound() {
         </span>
 
         <h1
-          className="text-7xl lg:text-9xl font-bold golden-text-glow dramatic-heading text-center"
+          className="text-5xl sm:text-7xl lg:text-9xl font-bold golden-text-glow dramatic-heading text-center"
           style={{ letterSpacing: '4px', marginBottom: '2px' }}
         >
           404

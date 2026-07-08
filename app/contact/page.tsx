@@ -163,7 +163,7 @@ export default function Contact() {
               ].map((card, i) => (
                 <motion.div
                   key={i}
-                  className="w-full dark-card rounded-2xl p-12 flex flex-col items-center text-center gap-6"
+                  className="w-full dark-card rounded-2xl p-6 sm:p-8 lg:p-12 flex flex-col items-center text-center gap-6"
                   whileHover={{ y: -8, boxShadow: '0 12px 35px rgba(212,175,55,0.25)' }}
                   transition={{ duration: 0.25 }}
                 >
@@ -230,7 +230,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="w-full max-w-3xl dark-card rounded-2xl p-10 sm:p-16 shadow-2xl">
+          <div className="w-full max-w-3xl dark-card rounded-2xl p-6 sm:p-10 lg:p-16 shadow-2xl">
             <h2
               className="text-2xl sm:text-3xl font-bold golden-text-glow dramatic-heading text-center"
               style={{ letterSpacing: '2px', marginBottom: '15px', marginTop: '1rem' }}

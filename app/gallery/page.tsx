@@ -26,7 +26,7 @@ export default function Gallery() {
   const selectedImg = galleryImages.find(img => img.id === selectedImage)
 
   return (
-    <main className="min-h-screen stage-background" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
+    <main className="min-h-screen stage-background py-16 sm:py-24 lg:py-[120px]">
 
       {/* ─── Page Header ─── */}
       <motion.div
@@ -35,7 +35,7 @@ export default function Gallery() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-6xl lg:text-7xl font-bold golden-text-glow dramatic-heading text-center mb-6">
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold golden-text-glow dramatic-heading text-center mb-6">
           GALLERY
         </h1>
         <div className="w-28 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mb-8" />

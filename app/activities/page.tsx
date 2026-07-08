@@ -54,8 +54,8 @@ export default function Activities() {
             {/* Productions */}
             <Link href="/activities/productions" className="w-full h-full">
               <motion.div
-                className="h-full dark-card rounded-2xl flex flex-col items-center text-center cursor-pointer"
-                style={{ padding: '3rem 3rem 2rem 3rem', justifyContent: 'space-between' }}
+                className="h-full dark-card rounded-2xl flex flex-col items-center text-center cursor-pointer px-6 py-8 sm:px-12 sm:pt-12 sm:pb-8"
+                style={{ justifyContent: 'space-between' }}
                 whileHover={{ y: -8, boxShadow: '0 12px 35px rgba(212,175,55,0.25)' }}
                 transition={{ duration: 0.25 }}
               >
@@ -79,8 +79,8 @@ export default function Activities() {
             {/* Festivals */}
             <Link href="/activities/festivals" className="w-full h-full">
               <motion.div
-                className="h-full dark-card rounded-2xl flex flex-col items-center text-center cursor-pointer"
-                style={{ padding: '3rem 3rem 2rem 3rem', justifyContent: 'space-between' }}
+                className="h-full dark-card rounded-2xl flex flex-col items-center text-center cursor-pointer px-6 py-8 sm:px-12 sm:pt-12 sm:pb-8"
+                style={{ justifyContent: 'space-between' }}
                 whileHover={{ y: -8, boxShadow: '0 12px 35px rgba(212,175,55,0.25)' }}
                 transition={{ duration: 0.25 }}
               >
@@ -104,8 +104,8 @@ export default function Activities() {
             {/* Other Activities */}
             <Link href="/activities/other-activities" className="w-full h-full">
               <motion.div
-                className="h-full dark-card rounded-2xl flex flex-col items-center text-center cursor-pointer"
-                style={{ padding: '3rem 3rem 2rem 3rem', justifyContent: 'space-between' }}
+                className="h-full dark-card rounded-2xl flex flex-col items-center text-center cursor-pointer px-6 py-8 sm:px-12 sm:pt-12 sm:pb-8"
+                style={{ justifyContent: 'space-between' }}
                 whileHover={{ y: -8, boxShadow: '0 12px 35px rgba(212,175,55,0.25)' }}
                 transition={{ duration: 0.25 }}
               >
