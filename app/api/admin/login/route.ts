@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { ADMIN_COOKIE_NAME, ADMIN_COOKIE_MAX_AGE, createSessionToken } from '@/lib/admin-auth'
 
 export async function POST(request: Request) {
   try {
@@ -10,7 +11,15 @@ export async function POST(request: Request) {
     }
 
     if (typeof passkey === 'string' && passkey === ADMIN_PASSKEY) {
-      return NextResponse.json({ success: true })
+      const response = NextResponse.json({ success: true })
+      response.cookies.set(ADMIN_COOKIE_NAME, createSessionToken(), {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'lax',
+        maxAge: ADMIN_COOKIE_MAX_AGE,
+        path: '/',
+      })
+      return response
     }
 
     return NextResponse.json({ error: 'Invalid passkey' }, { status: 401 })

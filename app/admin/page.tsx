@@ -22,7 +22,7 @@ export default function Admin() {
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Invalid passkey')
 
-      window.location.href = 'https://baytikram.vercel.app/activities'
+      window.location.href = '/'
 
       setIsAuthenticated(true)
       setPasskey('')
