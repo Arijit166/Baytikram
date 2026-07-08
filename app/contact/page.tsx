@@ -4,16 +4,27 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const FacebookIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+    <path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    <path fill="#fff" d="M16.79 12.073h-3.328v-2.25c0-.949.465-1.874 1.956-1.874h1.514V5.002s-1.374-.235-2.686-.235c-2.741 0-4.533 1.662-4.533 4.669v2.647H7.078v3.47h3.047v8.385a12.09 12.09 0 003.75 0v-8.385h2.796l.532-3.47z" />
   </svg>
 )
 
 const InstagramIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+    <defs>
+      <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#f09433" />
+        <stop offset="20%" stopColor="#e6683c" />
+        <stop offset="40%" stopColor="#dc2743" />
+        <stop offset="60%" stopColor="#cc2366" />
+        <stop offset="80%" stopColor="#bc1888" />
+      </linearGradient>
+    </defs>
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" fill="url(#ig-grad)" />
+    <rect width="16" height="16" x="4" y="4" rx="4" ry="4" fill="none" stroke="#fff" strokeWidth="2" />
+    <circle cx="12" cy="12" r="3.5" fill="none" stroke="#fff" strokeWidth="2" />
+    <circle cx="17.5" cy="6.5" r="1.5" fill="#fff" />
   </svg>
 )
 
@@ -85,14 +96,6 @@ export default function Contact() {
       />
       <div className="page-bg-overlay" />
 
-      {/* ── SPOTLIGHT BEAMS (theatre stage effect) ── */}
-      <div className="page-spotlights">
-        <div className="page-spotlight-left" />
-        <div className="page-spotlight-center" />
-        <div className="page-spotlight-right" />
-        <div className="page-spotlight-glow" />
-      </div>
-
       {/* ── PAGE CONTENT ── */}
       <div className="relative" style={{ zIndex: 10, paddingTop: '40px', paddingBottom: '100px' }}>
 
@@ -140,7 +143,7 @@ export default function Contact() {
                   content: (
                     <a
                       href="mailto:jadavpurbaytikram2001@gmail.com"
-                      className="text-[#D4AF37] hover:text-[#F4D03F] font-semibold text-sm text-center break-all leading-loose transition-colors"
+                      className="!text-gray-300 hover:!text-[#F4D03F] font-semibold text-sm text-center break-all leading-loose transition-colors"
                     >
                         jadavpurbaytikram2001@gmail.com
                     </a>
@@ -151,7 +154,7 @@ export default function Contact() {
                   content: (
                     <a
                       href="tel:+919007185494"
-                      className="text-[#D4AF37] hover:text-[#F4D03F] font-semibold text-sm text-center leading-loose transition-colors"
+                      className="!text-gray-300 hover:!text-[#F4D03F] font-semibold text-sm text-center leading-loose transition-colors"
                     >
                       +91 9007185494 
                     </a>
@@ -205,7 +208,7 @@ export default function Contact() {
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[#D4AF37] hover:text-[#F4D03F] text-sm font-semibold tracking-widest transition-all hover:scale-105 pb-1 border-b border-[#D4AF37]/40 hover:border-[#F4D03F]"
+                className="flex items-center gap-2 !text-gray-300 hover:!text-[#F4D03F] text-sm font-semibold tracking-widest transition-all hover:scale-105 pb-1 border-b border-[#D4AF37]/40 hover:!border-[#F4D03F]"
               >
                 {s.icon}
                 <span>{s.label.toUpperCase()}</span>

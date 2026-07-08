@@ -67,14 +67,6 @@ export default function About() {
       />
       <div className="page-bg-overlay" />
 
-      {/* ── SPOTLIGHT BEAMS (theatre stage effect) ── */}
-      <div className="page-spotlights">
-        <div className="page-spotlight-left" />
-        <div className="page-spotlight-center" />
-        <div className="page-spotlight-right" />
-        <div className="page-spotlight-glow" />
-      </div>
-
       {/* ── PAGE CONTENT ── */}
       <div className="relative flex flex-col items-center" style={{ zIndex: 10, paddingTop: '40px', paddingBottom: '120px' }}>
 

@@ -185,12 +185,6 @@ a:not(.navbar-link):hover {
   pointer-events: none;
 }
 
-.spotlight {
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, rgba(212, 175, 55, 0.2) 30%, rgba(212, 175, 55, 0.05) 70%, transparent 100%);
-  filter: blur(60px);
-  box-shadow: inset 0 -100px 200px rgba(212, 175, 55, 0.2);
-}
-
 .stage-frame {
   position: relative;
   border: 3px solid #D4AF37;
@@ -416,55 +410,4 @@ a:not(.navbar-link):hover {
   z-index: 1;
 }
 
-/* Spotlight beams for sub-pages (theatre stage effect) */
-.page-spotlights {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 2;
-}
 
-.page-spotlight-left {
-  position: absolute;
-  top: 0;
-  left: 18%;
-  width: 260px;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.04) 60%, transparent 100%);
-  clip-path: polygon(35% 0%, 65% 0%, 100% 100%, 0% 100%);
-  filter: blur(12px);
-}
-
-.page-spotlight-center {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 360px;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(212,175,55,0.22) 0%, rgba(212,175,55,0.06) 60%, transparent 100%);
-  clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
-  filter: blur(14px);
-}
-
-.page-spotlight-right {
-  position: absolute;
-  top: 0;
-  right: 18%;
-  width: 260px;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.04) 60%, transparent 100%);
-  clip-path: polygon(35% 0%, 65% 0%, 100% 100%, 0% 100%);
-  filter: blur(12px);
-}
-
-.page-spotlight-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  height: 450px;
-  background: radial-gradient(ellipse, rgba(212,175,55,0.07) 0%, transparent 70%);
-  filter: blur(50px);
-}

@@ -265,63 +265,6 @@ export default function Hero() {
           />
         ))}
 
-        {/* ── SPOTLIGHTS ── */}
-        <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 3 }}>
-          {/* Left spotlight beam */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '0',
-              left: '18%',
-              width: '260px',
-              height: '100%',
-              background: 'linear-gradient(180deg, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.04) 60%, transparent 100%)',
-              clipPath: 'polygon(35% 0%, 65% 0%, 100% 100%, 0% 100%)',
-              filter: 'blur(12px)',
-            }}
-          />
-          {/* Center spotlight beam */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '0',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              width: '360px',
-              height: '100%',
-              background: 'linear-gradient(180deg, rgba(212,175,55,0.22) 0%, rgba(212,175,55,0.06) 60%, transparent 100%)',
-              clipPath: 'polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%)',
-              filter: 'blur(14px)',
-            }}
-          />
-          {/* Right spotlight beam */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '0',
-              right: '18%',
-              width: '260px',
-              height: '100%',
-              background: 'linear-gradient(180deg, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.04) 60%, transparent 100%)',
-              clipPath: 'polygon(35% 0%, 65% 0%, 100% 100%, 0% 100%)',
-              filter: 'blur(12px)',
-            }}
-          />
-          {/* Ambient center glow */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: '700px',
-              height: '450px',
-              background: 'radial-gradient(ellipse, rgba(212,175,55,0.07) 0%, transparent 70%)',
-              filter: 'blur(50px)',
-            }}
-          />
-        </div>
-
         {/* ── STAGE FLOOR LINE ── */}
         <div
           className="absolute bottom-0 left-0 right-0 h-px"

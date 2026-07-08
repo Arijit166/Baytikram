@@ -13,14 +13,6 @@ export default function NotFound() {
       />
       <div className="page-bg-overlay" />
 
-      {/* ── SPOTLIGHT BEAMS (theatre stage effect) ── */}
-      <div className="page-spotlights">
-        <div className="page-spotlight-left" />
-        <div className="page-spotlight-center" />
-        <div className="page-spotlight-right" />
-        <div className="page-spotlight-glow" />
-      </div>
-
       {/* ── PAGE CONTENT ── */}
       <motion.div
         className="relative flex flex-col items-center text-center px-4 -mt-16 md:-mt-24"

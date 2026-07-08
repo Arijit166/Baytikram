@@ -30,14 +30,6 @@ export default function Workshop() {
       />
       <div className="page-bg-overlay" />
 
-      {/* ── SPOTLIGHT BEAMS (theatre stage effect) ── */}
-      <div className="page-spotlights">
-        <div className="page-spotlight-left" />
-        <div className="page-spotlight-center" />
-        <div className="page-spotlight-right" />
-        <div className="page-spotlight-glow" />
-      </div>
-
       {/* ── PAGE CONTENT ── */}
       <div className="relative flex flex-col items-center" style={{ zIndex: 10, paddingTop: '40px', paddingBottom: '120px' }}>
 
@@ -97,7 +89,7 @@ export default function Workshop() {
                 <img
                   src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/workshop/workshop overview.jpeg"
                   alt="Workshop Overview"
-                  className="w-full aspect-[3/2] object-cover rounded-2xl"
+                  className="w-full aspect-[3/2] object-cover rounded-2xl border-2 border-[#D4AF37]"
                 />
               </div>
             </div>
@@ -151,7 +143,7 @@ export default function Workshop() {
             <img
               src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/workshop/workshop-training.jpeg"
               alt="Workshop Training Session"
-              className="w-full aspect-[16/6] object-cover rounded-2xl"
+              className="w-full aspect-[16/6] object-cover rounded-2xl border-2 border-[#D4AF37]"
             />
           </div>
         </motion.div>
@@ -172,7 +164,7 @@ export default function Workshop() {
                 <img
                   src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/workshop/street-play.jpeg"
                   alt="Nukkad Natak Street Theatre"
-                  className="w-full aspect-[3/2.5] object-cover rounded-2xl"
+                  className="w-full aspect-[3/2.5] object-cover rounded-2xl border-2 border-[#D4AF37]"
                 />
               </div>
               <div className="lg:col-span-3 dark-card rounded-2xl order-1 lg:order-2" style={{ padding: '2.5rem' }}>
@@ -250,7 +242,7 @@ export default function Workshop() {
                 <img
                   src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/workshop/residential.jpeg"
                   alt="Non-Residential Workshop"
-                  className="w-full aspect-[4/3] object-cover rounded-2xl"
+                  className="w-full aspect-[4/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
                   style={{ marginTop: 'auto' }}
                 />
               </motion.div>
@@ -302,7 +294,7 @@ export default function Workshop() {
                 <img
                   src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/workshop/non-residential.jpeg"
                   alt="Residential Workshop"
-                  className="w-full aspect-[4/3] object-cover rounded-2xl"
+                  className="w-full aspect-[4/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
                   style={{ marginTop: 'auto' }}
                 />
               </motion.div>

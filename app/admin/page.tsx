@@ -43,14 +43,6 @@ export default function Admin() {
       />
       <div className="page-bg-overlay" />
 
-      {/* ── SPOTLIGHT BEAMS (theatre stage effect) ── */}
-      <div className="page-spotlights">
-        <div className="page-spotlight-left" />
-        <div className="page-spotlight-center" />
-        <div className="page-spotlight-right" />
-        <div className="page-spotlight-glow" />
-      </div>
-
       {/* ── PAGE CONTENT ── */}
       <div
         className="relative flex items-center justify-center min-h-screen px-4"

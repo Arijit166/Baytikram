@@ -30,14 +30,6 @@ export default function Festivals() {
       />
       <div className="page-bg-overlay" />
 
-      {/* ── SPOTLIGHT BEAMS (theatre stage effect) ── */}
-      <div className="page-spotlights">
-        <div className="page-spotlight-left" />
-        <div className="page-spotlight-center" />
-        <div className="page-spotlight-right" />
-        <div className="page-spotlight-glow" />
-      </div>
-
       {/* ── PAGE CONTENT ── */}
       <div className="relative flex flex-col items-center" style={{ zIndex: 10, paddingTop: '40px', paddingBottom: '120px' }}>
 
@@ -107,7 +99,7 @@ export default function Festivals() {
                 <img
                   src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festivals/Festival%201.jpeg"
                   alt="Muktamancha Open Air Theatre Festival"
-                  className="w-full aspect-[3/3] object-cover rounded-2xl"
+                  className="w-full aspect-[3/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
                 />
               </div>
             </div>
@@ -130,7 +122,7 @@ export default function Festivals() {
                 <img
                   src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festivals/Festival%205.jpeg"
                   alt="Antaranga Intimate Theatre Festival"
-                  className="w-full aspect-[3/3] object-cover rounded-2xl"
+                  className="w-full aspect-[3/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
                 />
               </div>
               <div className="lg:col-span-3 lg:order-2 order-1 dark-card rounded-2xl" style={{ padding: '2.5rem' }}>
@@ -171,22 +163,22 @@ export default function Festivals() {
               <img
                 src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festivals/Festival%203.jpeg"
                 alt="Festival Moment 1"
-                className="w-full sm:col-span-2 aspect-[4/3] object-cover rounded-2xl"
+                className="w-full sm:col-span-2 aspect-[4/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
               />
               <img
                 src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festivals/festival%204.jpeg"
                 alt="Festival Moment 2"
-                className="w-full sm:col-span-2 aspect-[4/3] object-cover rounded-2xl"
+                className="w-full sm:col-span-2 aspect-[4/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
               />
               <img
                 src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festivals/Festival%202.jpeg"
                 alt="Festival Moment 3"
-                className="w-full sm:col-span-2 aspect-[16/10] object-cover rounded-2xl"
+                className="w-full sm:col-span-2 aspect-[16/10] object-cover rounded-2xl border-2 border-[#D4AF37]"
               />
               <img
                 src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/festivals/Festival6.jpeg"
                 alt="Festival Moment 4"
-                className="w-full sm:col-span-2 aspect-[16/10] object-cover rounded-2xl"
+                className="w-full sm:col-span-2 aspect-[16/10] object-cover rounded-2xl border-2 border-[#D4AF37]"
               />
             </div>
           </div>

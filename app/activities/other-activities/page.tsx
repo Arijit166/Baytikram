@@ -30,14 +30,6 @@ export default function OtherActivities() {
       />
       <div className="page-bg-overlay" />
 
-      {/* ── SPOTLIGHT BEAMS (theatre stage effect) ── */}
-      <div className="page-spotlights">
-        <div className="page-spotlight-left" />
-        <div className="page-spotlight-center" />
-        <div className="page-spotlight-right" />
-        <div className="page-spotlight-glow" />
-      </div>
-
       {/* ── PAGE CONTENT ── */}
       <div className="relative flex flex-col items-center" style={{ zIndex: 10, paddingTop: '40px', paddingBottom: '120px' }}>
 
@@ -101,12 +93,12 @@ export default function OtherActivities() {
               <img
                 src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/other-activities/Dance%201.jpg.jpeg"
                 alt="Dance Training Session"
-                className="w-full aspect-[4/3] object-cover rounded-2xl"
+                className="w-full aspect-[4/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
               />
               <img
                 src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/other-activities/Dance2.jpeg"
                 alt="Dance Drama Performance"
-                className="w-full aspect-[4/3] object-cover rounded-2xl"
+                className="w-full aspect-[4/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
               />
             </div>
           </div>
@@ -139,18 +131,18 @@ export default function OtherActivities() {
               <img
                 src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/other-activities/Art%20Workshop%20F3.jpeg"
                 alt="Stagecraft Workshop"
-                className="w-full sm:col-span-2 aspect-[16/11] object-cover rounded-2xl self-center"
+                className="w-full sm:col-span-2 aspect-[16/11] object-cover rounded-2xl self-center border-2 border-[#D4AF37]"
               />
               <div className="grid grid-cols-1 gap-8">
                 <img
                   src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/other-activities/Art%20workshop%20F2.jpeg"
                   alt="Stage Design Workshop"
-                  className="w-full aspect-[4/3] object-cover rounded-2xl"
+                  className="w-full aspect-[4/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
                 />
                 <img
                   src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/other-activities/Art%20workshop%20F1.jpeg"
                   alt="Set Craft Session"
-                  className="w-full aspect-[4/3] object-cover rounded-2xl"
+                  className="w-full aspect-[4/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
                 />
               </div>
             </div>

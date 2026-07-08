@@ -30,14 +30,6 @@ export default function AwarenessProgram() {
       />
       <div className="page-bg-overlay" />
 
-      {/* ── SPOTLIGHT BEAMS (theatre stage effect) ── */}
-      <div className="page-spotlights">
-        <div className="page-spotlight-left" />
-        <div className="page-spotlight-center" />
-        <div className="page-spotlight-right" />
-        <div className="page-spotlight-glow" />
-      </div>
-
       {/* ── PAGE CONTENT ── */}
       <div className="relative flex flex-col items-center" style={{ zIndex: 10, paddingTop: '40px', paddingBottom: '120px' }}>
 
@@ -103,7 +95,7 @@ export default function AwarenessProgram() {
                 <img
                   src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/awareness/field-perform.jpeg"
                   alt="Field Performance"
-                  className="w-full aspect-[3/4] object-cover rounded-2xl"
+                  className="w-full aspect-[3/4] object-cover rounded-2xl border-2 border-[#D4AF37]"
                 />
               </div>
             </div>
@@ -157,7 +149,7 @@ export default function AwarenessProgram() {
             <img
               src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/awareness/community%20engagement.jpeg"
               alt="Community Engagement"
-              className="w-full aspect-[16/6] object-cover rounded-2xl"
+              className="w-full aspect-[16/6] object-cover rounded-2xl border-2 border-[#D4AF37]"
             />
           </div>
         </motion.div>
@@ -204,12 +196,12 @@ export default function AwarenessProgram() {
               <img
                 src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/awareness/child-rights.jpeg"
                 alt="Child Rights Skit"
-                className="w-full aspect-[4/3] object-cover rounded-2xl"
+                className="w-full aspect-[4/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
               />
               <img
                 src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/awareness/village-play.jpeg"
                 alt="Street Play"
-                className="w-full aspect-[4/3] object-cover rounded-2xl"
+                className="w-full aspect-[4/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
               />
             </div>
           </div>
@@ -275,7 +267,7 @@ export default function AwarenessProgram() {
             <img
               src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/awareness/rehearsal.jpeg"
               alt="Rehearsal Session"
-              className="w-full aspect-[16/8] object-cover rounded-2xl"
+              className="w-full aspect-[16/8] object-cover rounded-2xl border-2 border-[#D4AF37]"
             />
           </div>
         </motion.div>
@@ -296,7 +288,7 @@ export default function AwarenessProgram() {
                 <img
                   src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/awareness/slum%20intervention.jpeg"
                   alt="Slum Intervention"
-                  className="w-full aspect-[3/3] object-cover rounded-2xl"
+                  className="w-full aspect-[3/3] object-cover rounded-2xl border-2 border-[#D4AF37]"
                 />
               </div>
               <div className="lg:col-span-3 dark-card rounded-2xl" style={{ padding: '2.5rem' }}>
