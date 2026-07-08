@@ -340,7 +340,7 @@ export default function Productions() {
                       src={prod.image}
                       alt={prod.titleEn}
                       fill
-                      className="object-cover"
+                      className="object-contain md:object-cover"
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
                   </div>
