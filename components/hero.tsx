@@ -409,11 +409,16 @@ export default function Hero() {
               {/* Productions Card */}
               <Link href="/activities/productions" className="w-full sm:w-auto sm:flex-1">
                 <motion.div
-                  className="dark-card px-6 py-8 sm:px-8 sm:py-10 rounded-lg w-full h-full cursor-pointer flex flex-col"
+                  className="dark-card px-6 py-8 sm:px-8 sm:py-10 rounded-lg w-full h-full cursor-pointer flex flex-col items-center"
                   whileHover={{ boxShadow: '0 16px 50px rgba(212,175,55,0.45)' }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="text-5xl sm:text-6xl" style={{ marginBottom: '16px' }}>🎭</div>
+                  <img
+                    src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/symbols/Production%20Icon.jpeg"
+                    alt="Productions"
+                    className="object-contain"
+                    style={{ width: '64px', height: '64px', marginBottom: '16px', alignSelf: 'center', marginTop: '12px' }}
+                  />
                   <h3
                     className="text-2xl sm:text-3xl font-bold text-[#D4AF37] dramatic-heading"
                     style={{ marginBottom: '12px' }}
@@ -429,11 +434,16 @@ export default function Hero() {
               {/* TFD Card */}
               <Link href="/tfd" className="w-full sm:w-auto sm:flex-1">
                 <motion.div
-                  className="dark-card px-6 py-8 sm:px-8 sm:py-10 rounded-lg w-full h-full cursor-pointer flex flex-col"
+                  className="dark-card px-6 py-8 sm:px-8 sm:py-10 rounded-lg w-full h-full cursor-pointer flex flex-col items-center"
                   whileHover={{ boxShadow: '0 16px 50px rgba(212,175,55,0.45)' }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="text-5xl sm:text-6xl" style={{ marginBottom: '16px' }}>❤️</div>
+                  <img
+                    src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/symbols/TFD%20icon.jpeg"
+                    alt="Theatre for Development"
+                    className="object-contain"
+                    style={{ width: '64px', height: '64px', marginBottom: '16px', alignSelf: 'center', marginTop: '12px' }}
+                  />
                   <h3
                     className="text-2xl sm:text-3xl font-bold text-[#D4AF37] dramatic-heading"
                     style={{ marginBottom: '12px' }}

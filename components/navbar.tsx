@@ -4,11 +4,30 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import { motion } from 'framer-motion'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
+  const [isAdmin, setIsAdmin] = useState(false)
+  const [showLogoutModal, setShowLogoutModal] = useState(false)
+  const router = useRouter()
+
+  useEffect(() => {
+    fetch('/api/admin/session')
+      .then((res) => setIsAdmin(res.ok))
+      .catch(() => setIsAdmin(false))
+  }, [pathname])
+
+  async function handleLogout() {
+    setShowLogoutModal(false)
+    await fetch('/api/admin/logout', { method: 'POST' })
+    setIsAdmin(false)
+    router.push('/')
+    router.refresh()
+  }
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -39,17 +58,98 @@ export default function Navbar() {
   const adminClass = 'border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/20'
 
   return (
-    <nav className={`sticky top-0 w-full z-50 transition-all duration-500 ${navBg}`}>
+    <>
+      {/* ── Custom Logout Confirmation Modal ── */}
+      {showLogoutModal && (
+        <div
+          className="fixed inset-0 flex items-center justify-center"
+          style={{ zIndex: 9999, background: 'rgba(0,0,0,0.78)', backdropFilter: 'blur(4px)' }}
+        >
+          <motion.div
+            className="dark-card rounded-2xl p-8 sm:p-10 flex flex-col items-center text-center"
+            style={{ maxWidth: '380px', width: '90%', boxShadow: '0 0 60px rgba(212,175,55,0.25)' }}
+            initial={{ opacity: 0, scale: 0.88 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.22 }}
+          >
+            {/* Icon */}
+            <div
+              style={{
+                width: '56px',
+                height: '56px',
+                borderRadius: '50%',
+                background: 'rgba(212,175,55,0.12)',
+                border: '2px solid #D4AF37',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '1.25rem',
+                fontSize: '1.5rem',
+              }}
+            >
+              🚪
+            </div>
+
+            <h3
+              className="dramatic-heading golden-text-glow"
+              style={{ fontSize: '1.05rem', letterSpacing: '2px', marginBottom: '0.6rem' }}
+            >
+              CONFIRM LOGOUT
+            </h3>
+
+            <p className="text-gray-300 text-sm leading-relaxed" style={{ marginBottom: '1.5rem' }}>
+              Are you sure you want to log out of the admin portal? You will need your passkey to log in again.
+            </p>
+
+            <div className="velvet-divider w-full" style={{ marginBottom: '1.5rem' }} />
+
+            <div className="flex gap-3 w-full">
+              <button
+                onClick={() => setShowLogoutModal(false)}
+                className="flex-1 font-semibold rounded-xl text-sm transition-all"
+                style={{
+                  padding: '0.75rem 1rem',
+                  background: 'rgba(255,255,255,0.07)',
+                  color: '#D4AF37',
+                  border: '1.5px solid rgba(212,175,55,0.35)',
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleLogout}
+                className="flex-1 font-semibold rounded-xl text-sm transition-all"
+                style={{
+                  padding: '0.75rem 1rem',
+                  background: '#6B0F1F',
+                  color: '#D4AF37',
+                  border: '1.5px solid #D4AF37',
+                }}
+              >
+                Logout
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      <nav className={`sticky top-0 w-full z-50 transition-all duration-500 ${navBg}`}>
       <div className="navbar-inner">
         <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 min-w-0">
+            <img
+              src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/logo_Fotor.jpeg"
+              alt="Jadavpur Baytikram Logo"
+              className="object-contain flex-shrink-0 w-14 h-auto sm:w-20 md:w-24 lg:w-28"
+            />
             <span
-              className="text-xl sm:text-2xl font-bold transition-colors dramatic-heading"
+              className="font-bold transition-colors dramatic-heading flex flex-col sm:flex-row sm:items-baseline sm:gap-1.5 leading-tight min-w-0"
               style={{ color: logoColor }}
             >
-              Jadavpur Baytikram
+              <span className="text-sm sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap">Jadavpur</span>
+              <span className="text-sm sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap">Baytikram</span>
             </span>
           </Link>
 
@@ -68,6 +168,15 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
+            {isAdmin && (
+              <button
+                onClick={() => setShowLogoutModal(true)}
+                className="text-xs font-semibold rounded-md border transition-colors"
+                style={{ padding: '0.5rem 1rem', borderColor: '#D4AF37', color: '#D4AF37' }}
+              >
+                LOGOUT
+              </button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,9 +206,18 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
+            {isAdmin && (
+              <button
+                onClick={() => { setShowLogoutModal(true); setIsOpen(false) }}
+                className="block w-full text-left px-6 py-3 font-medium text-[#D4AF37]/80 hover:bg-[#D4AF37]/10 transition-colors"
+              >
+                Logout
+              </button>
+            )}
           </div>
         )}
       </div>
-    </nav>
+      </nav>
+    </>
   )
 }

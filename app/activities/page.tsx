@@ -60,8 +60,13 @@ export default function Activities() {
                 transition={{ duration: 0.25 }}
               >
                 {/* Top content group */}
-                <div className="flex flex-col items-center text-center gap-6">
-                  <span className="text-5xl">🎬</span>
+                <div className="flex flex-col items-center text-center gap-6" style={{ paddingTop: '8px' }}>
+                  <img
+                    src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/symbols/Production%20Icon.jpeg"
+                    alt="Productions"
+                    className="object-contain"
+                    style={{ width: '56px', height: '56px' }}
+                  />
                   <h3 className="text-xl font-bold golden-text-glow dramatic-heading tracking-widest text-center">
                     PRODUCTIONS
                   </h3>
@@ -85,8 +90,13 @@ export default function Activities() {
                 transition={{ duration: 0.25 }}
               >
                 {/* Top content group */}
-                <div className="flex flex-col items-center text-center gap-6">
-                  <span className="text-5xl">🎪</span>
+                <div className="flex flex-col items-center text-center gap-6" style={{ paddingTop: '8px' }}>
+                  <img
+                    src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/symbols/Festival%20Icon.jpeg"
+                    alt="Festivals"
+                    className="object-contain"
+                    style={{ width: '56px', height: '56px' }}
+                  />
                   <h3 className="text-xl font-bold golden-text-glow dramatic-heading tracking-widest text-center">
                     FESTIVALS
                   </h3>
@@ -110,8 +120,13 @@ export default function Activities() {
                 transition={{ duration: 0.25 }}
               >
                 {/* Top content group */}
-                <div className="flex flex-col items-center text-center gap-6">
-                  <span className="text-5xl">🤝</span>
+                <div className="flex flex-col items-center text-center gap-6" style={{ paddingTop: '8px' }}>
+                  <img
+                    src="https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/symbols/Other%20acrivity%20Icon.jpeg"
+                    alt="Other Activities"
+                    className="object-contain"
+                    style={{ width: '56px', height: '56px' }}
+                  />
                   <h3 className="text-xl font-bold golden-text-glow dramatic-heading tracking-widest text-center">
                     OTHER ACTIVITIES
                   </h3>

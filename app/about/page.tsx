@@ -15,7 +15,7 @@ const executiveMembers = [
     id: 2,
     name: 'Dipankar Banerjee',
     role: 'Secretary',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/members/2%20Dipankar%20Banerjee%20Secretary.jpg.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/members/dipankar%20banerjee%20secretary%20%202.jpg.jpeg',
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const executiveMembers = [
     id: 4,
     name: 'Prabir Dey',
     role: 'Executive Member',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/members/4%20Prabir%20Dey%20Executive%20Member.jpg.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/members/parbir%20dey%20F3.jpg.jpeg',
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const executiveMembers = [
     id: 7,
     name: 'Deba Roy',
     role: 'Executive Member and Director',
-    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/members/7%20Deba%20Roy%20Executive%20Member%20and%20Director.jpeg',
+    image: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/members/deba%20roy%20F2.jpg.jpeg',
   },
 ]
 

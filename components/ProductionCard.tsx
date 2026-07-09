@@ -29,6 +29,7 @@ export function ProductionCard({
 }) {
   const [editing, setEditing] = useState(false)
   const [busy, setBusy] = useState(false)
+  const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [form, setForm] = useState({
     titleEn: production.titleEn,
     titleBn: production.titleBn || '',
@@ -54,7 +55,7 @@ export function ProductionCard({
   }
 
   async function handleDelete() {
-    if (!confirm('Delete this production permanently?')) return
+    setShowDeleteModal(false)
     setBusy(true)
     await fetch('/api/admin/productions', {
       method: 'DELETE',
@@ -89,6 +90,93 @@ export function ProductionCard({
   const credits = buildCredits(production)
 
   return (
+    <>
+      {/* ── Custom Delete Confirmation Modal ── */}
+      {showDeleteModal && (
+        <div
+          className="fixed inset-0 flex items-center justify-center"
+          style={{ zIndex: 9000, background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(4px)' }}
+        >
+          <motion.div
+            className="dark-card rounded-2xl p-8 sm:p-10 flex flex-col items-center text-center"
+            style={{ maxWidth: '400px', width: '90%', boxShadow: '0 0 60px rgba(212,175,55,0.25)' }}
+            initial={{ opacity: 0, scale: 0.88 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.22 }}
+          >
+            {/* Warning Icon */}
+            <div
+              style={{
+                width: '56px',
+                height: '56px',
+                borderRadius: '50%',
+                background: 'rgba(185,28,28,0.18)',
+                border: '2px solid #B91C1C',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '1.25rem',
+                fontSize: '1.6rem',
+              }}
+            >
+              ⚠️
+            </div>
+
+            <h3
+              className="dramatic-heading golden-text-glow"
+              style={{ fontSize: '1.1rem', letterSpacing: '2px', marginBottom: '0.6rem' }}
+            >
+              DELETE PRODUCTION
+            </h3>
+
+            <p className="text-gray-300 text-sm leading-relaxed" style={{ marginBottom: '0.4rem' }}>
+              You are about to permanently delete
+            </p>
+            <p
+              className="text-[#D4AF37] font-semibold text-sm"
+              style={{ marginBottom: '1.6rem' }}
+            >
+              &ldquo;{production.titleEn}&rdquo;
+            </p>
+
+            <div className="velvet-divider w-full" style={{ marginBottom: '1.5rem' }} />
+
+            <p className="text-gray-400 text-xs" style={{ marginBottom: '1.8rem' }}>
+              This action cannot be undone. All data and images associated with this production will be lost.
+            </p>
+
+            <div className="flex gap-3 w-full">
+              <button
+                onClick={() => setShowDeleteModal(false)}
+                className="flex-1 font-semibold rounded-xl text-sm transition-all"
+                style={{
+                  padding: '0.75rem 1rem',
+                  background: 'rgba(255,255,255,0.07)',
+                  color: '#D4AF37',
+                  border: '1.5px solid rgba(212,175,55,0.35)',
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleDelete}
+                disabled={busy}
+                className="flex-1 font-semibold rounded-xl text-sm transition-all"
+                style={{
+                  padding: '0.75rem 1rem',
+                  background: '#B91C1C',
+                  color: '#fff',
+                  border: '1.5px solid #B91C1C',
+                  opacity: busy ? 0.6 : 1,
+                }}
+              >
+                {busy ? 'Deleting…' : 'Delete'}
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
     <motion.div
       className="dark-card rounded-2xl overflow-hidden"
       initial={{ opacity: 0, y: 30 }}
@@ -208,7 +296,10 @@ export function ProductionCard({
           ) : (
             <>
               <div className="flex flex-col" style={{ marginBottom: '1rem' }}>
-                <h2 className="text-2xl font-bold golden-text-glow dramatic-heading tracking-wide">
+                <span className="text-[#D4AF37] text-xs font-semibold tracking-widest">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <h2 className="text-2xl font-bold golden-text-glow dramatic-heading tracking-wide" style={{ marginTop: '0.25rem' }}>
                   {production.titleEn}
                   {production.titleBn && (
                     <span className="text-gray-300 font-normal text-lg"> ({production.titleBn})</span>
@@ -253,7 +344,7 @@ export function ProductionCard({
                     Edit
                   </button>
                   <button
-                    onClick={handleDelete}
+                    onClick={() => setShowDeleteModal(true)}
                     disabled={busy}
                     className="text-xs font-semibold rounded-md"
                     style={{ padding: '0.4rem 0.9rem', background: '#B91C1C', color: '#fff' }}
@@ -267,5 +358,6 @@ export function ProductionCard({
         </div>
       </div>
     </motion.div>
+    </>
   )
 }
