@@ -7,22 +7,34 @@ type Manifest = Record<string, string | null>
 
 type ManifestState = {
   manifest: Manifest
+  captions: Record<string, string>
   isAdmin: boolean
   loading: boolean
   refresh: () => void
+  refreshCaptions: () => void
 }
 
 const ManifestContext = createContext<ManifestState>({
   manifest: {},
+  captions: {},
   isAdmin: false,
   loading: true,
   refresh: () => {},
+  refreshCaptions: () => {},
 })
 
 export function ImageManifestProvider({ children }: { children: ReactNode }) {
   const [manifest, setManifest] = useState<Manifest>({})
   const [isAdmin, setIsAdmin] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [captions, setCaptions] = useState<Record<string, string>>({})
+
+  const refreshCaptions = () => {
+    fetch('/api/captions', { cache: 'no-store' })
+      .then((res) => res.json())
+      .then(setCaptions)
+      .catch(() => setCaptions({}))
+  }
 
   const refresh = () => {
     fetch('/api/images', { cache: 'no-store' })
@@ -40,7 +52,7 @@ export function ImageManifestProvider({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <ManifestContext.Provider value={{ manifest, isAdmin, loading, refresh }}>
+    <ManifestContext.Provider value={{ manifest, captions, isAdmin, loading, refresh, refreshCaptions }}>
       {children}
     </ManifestContext.Provider>
   )
@@ -148,4 +160,8 @@ export function SlotImage({
       )}
     </div>
   )
+}
+
+export function useManifest() {
+  return useContext(ManifestContext)
 }

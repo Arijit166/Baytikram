@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ImageManifestProvider, SlotImage } from '@/components/SlotImage'
+import { EditableCaption } from '@/components/EditableCaption'
 
 const galleryImages = [
   {
@@ -127,9 +128,7 @@ export default function GalleryPage() {
                     style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
                   />
                 </div>
-                <p className="text-gray-300 text-xs leading-[1.8] text-center" style={{ padding: '1rem' }}>
-                  {item.caption}
-                </p>
+                <EditableCaption slotKey={item.slotKey} defaultCaption={item.caption} />
               </motion.div>
             ))}
           </div>

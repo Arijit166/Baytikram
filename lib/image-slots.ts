@@ -40,6 +40,28 @@ export const IMAGE_SLOTS = {
   'gallery-4': { label: 'Gallery 4', page: 'Gallery', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/gallery/Gallery 4.jpeg' },
   'gallery-5': { label: 'Gallery 5', page: 'Gallery', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/gallery/Gallery5.jpeg' },
   'gallery-6': { label: 'Gallery 6', page: 'Gallery', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/gallery/Gallery 6.jpeg' },
+
+  'production-1': { label: 'Shiri Bhenge Surjo', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Siri Bhenge Surja.jpg.jpeg' },
+  'production-2': { label: 'Otit Bartaman', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Otit Bartaman F.jpg.jpeg' },
+  'production-3': { label: 'Karna Kunti Sangvad', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/3 karna kunti sangbad.jpeg' },
+  'production-4': { label: 'Sanrashi', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Sanrashi.jpg.jpeg' },
+  'production-5': { label: 'Bhat', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Bhat Poster.jpeg' },
+  'production-6': { label: 'Kalobag', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Kalobag.jpeg' },
+  'production-7': { label: 'Favourite Bou', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Favorite-Bou.jpeg' },
+  'production-8': { label: 'Pharrheziasth', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Pharrheziasth.jpeg' },
+  'production-9': { label: 'Bite', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/bite.jpeg' },
+  'production-10': { label: 'Bhagaban Dot Dot', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/10 bhagaban Dot Dot.jpeg' },
+  'production-11': { label: 'Kidnap Kando', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Kidnap Kando.jpeg' },
+  'production-12': { label: '2973190', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/12 2973190.jpeg' },
+  'production-13': { label: 'Char Akswar', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Char Akswar.jpeg' },
+  'production-14': { label: 'Kunda Phooler Mala', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Kunda fuler mala .jpeg' },
+  'production-15': { label: 'Jampuri Jamjamat', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Jampuri Jamjamat.jpeg' },
+  'production-16': { label: 'Le Jhilli', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Le Jhilli.jpeg' },
+  'production-17': { label: 'Durneety Darpan', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Durniti Darpan F 17.jpg.jpeg' },
+  'production-18': { label: 'Mahabidya Adhikontu', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Mahabidha.jpeg' },
+  'production-19': { label: 'Apekhsha', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Apekhha.jpeg' },
+  'production-20': { label: 'E Parobashe', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/E parobashe.jpeg' },
+  'production-21': { label: 'Mon Paboner Nao', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/poster mon paboner nao.jpeg' },
 } as const
 
 export type SlotKey = keyof typeof IMAGE_SLOTS
