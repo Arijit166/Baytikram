@@ -133,7 +133,7 @@ export function ProductionCard({
               You are about to permanently delete
             </p>
             <p
-              className="text-[#D4AF37] font-semibold text-sm"
+              className="text-[#D4AF37] font-semibold text-sm break-words w-full"
               style={{ marginBottom: '1.6rem' }}
             >
               &ldquo;{production.titleEn}&rdquo;
@@ -184,7 +184,7 @@ export function ProductionCard({
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-stretch`}>
+      <div className={`flex flex-col min-w-0 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-stretch`}>
         {/* Image */}
         <div className="w-full md:w-2/5 flex items-stretch" style={{ padding: '1.25rem' }}>
           <div
@@ -243,7 +243,7 @@ export function ProductionCard({
         </div>
 
         {/* Text content */}
-        <div className="w-full md:w-3/5 flex flex-col" style={{ padding: '2.5rem' }}>
+        <div className="w-full md:w-3/5 flex flex-col min-w-0 overflow-hidden" style={{ padding: '2.5rem' }}>
           {editing ? (
             <div className="flex flex-col" style={{ gap: '0.6rem' }}>
               {([
@@ -299,7 +299,7 @@ export function ProductionCard({
                 <span className="text-[#D4AF37] text-xs font-semibold tracking-widest">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <h2 className="text-2xl font-bold golden-text-glow dramatic-heading tracking-wide" style={{ marginTop: '0.25rem' }}>
+                <h2 className="text-xl font-bold golden-text-glow dramatic-heading tracking-wide break-words" style={{ marginTop: '0.25rem' }}>
                   {production.titleEn}
                   {production.titleBn && (
                     <span className="text-gray-300 font-normal text-lg"> ({production.titleBn})</span>
@@ -315,20 +315,20 @@ export function ProductionCard({
               {credits.length > 0 && (
                 <div className="flex flex-col" style={{ marginBottom: '1rem', gap: '0.15rem' }}>
                   {credits.map((line, i) => (
-                    <span key={i} className="text-[#D4AF37]/80 text-sm">{line}</span>
+                    <span key={i} className="text-[#D4AF37]/80 text-sm break-words">{line}</span>
                   ))}
                 </div>
               )}
 
               {production.synopsis && (
-                <p className="text-gray-300 text-sm leading-[1.9] whitespace-pre-line" style={{ marginBottom: '1rem' }}>
+                <p className="text-gray-300 text-sm leading-[1.9] whitespace-pre-line break-words" style={{ marginBottom: '1rem' }}>
                   <span className="text-[#D4AF37] font-semibold">Synopsis- </span>
                   {production.synopsis}
                 </p>
               )}
 
               {production.actors && (
-                <p className="text-gray-400 text-xs leading-[1.8]">
+                <p className="text-gray-400 text-xs leading-[1.8] break-words">
                   <span className="text-[#D4AF37]/80 font-semibold">Pioneer Actors: </span>
                   {production.actors}
                 </p>

@@ -1,8 +1,12 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { ImageManifestProvider, SlotImage } from '@/components/SlotImage'
+import { ImageManifestProvider, SlotImage, useManifest } from '@/components/SlotImage'
 import { EditableCaption } from '@/components/EditableCaption'
+import { GalleryItemCard } from '@/components/GalleryItemCard'
+import { AddGalleryItemForm } from '@/components/AddGalleryItemForm'
+import type { GalleryItem } from '@/lib/models/gallery-item'
 
 const galleryImages = [
   {
@@ -43,6 +47,47 @@ const galleryImages = [
     caption: 'Honouring group members',
   },
 ] as const
+
+function GalleryInner() {
+  const { isAdmin } = useManifest()
+  const [extra, setExtra] = useState<GalleryItem[]>([])
+
+  const loadExtra = () => {
+    fetch('/api/gallery-items?type=gallery', { cache: 'no-store' })
+      .then((res) => res.json())
+      .then(setExtra)
+      .catch(() => setExtra([]))
+  }
+
+  useEffect(() => {
+    loadExtra()
+  }, [])
+
+  return (
+    <>
+      {extra.map((item) => (
+        <GalleryItemCard
+          key={item._id}
+          item={item}
+          isAdmin={isAdmin}
+          onChanged={loadExtra}
+          imageWrapperClassName="w-full"
+          imageWrapperStyle={{
+            position: 'relative',
+            aspectRatio: '16 / 10',
+            borderBottom: '1.5px solid rgba(212,175,55,0.35)',
+          }}
+          imageClassName="object-cover"
+        />
+      ))}
+      {isAdmin && (
+        <div className="sm:col-span-2">
+          <AddGalleryItemForm type="gallery" onAdded={loadExtra} />
+        </div>
+      )}
+    </>
+  )
+}
 
 export default function GalleryPage() {
   return (
@@ -131,6 +176,8 @@ export default function GalleryPage() {
                 <EditableCaption slotKey={item.slotKey} defaultCaption={item.caption} />
               </motion.div>
             ))}
+
+            <GalleryInner />
           </div>
 
         </div>
