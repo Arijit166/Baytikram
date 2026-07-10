@@ -40,7 +40,7 @@ const productions = [
     credits: ['Dramaturge- Rabidranath Tagore', 'Director- Deba Roy'],
     synopsis:
       "Karna and Kunti are two figures from the Mahabharata, bound by the ties of mother and son. Karna was cast adrift in the waters at birth because Kunti had conceived him while still unwed. As time passed, that very son returned as an adversary, facing her other five sons in a great war. On the eve of the battle with Arjuna, Kunti came forward to assert her maternal claim and sought to take away his protective armor; knowing full well that this would mean his death, Karna nonetheless surrendered it to his mother. The struggle faced by mothers of illegitimate children remains just as relevant in society today; the crowded abortion clinics bear witness to this. Driven by the fear of social stigma, a mother may terminate the pregnancy or abandon the newborn in a trash bin. This forms the central theme of the play.",
-    actors: 'Deba Roy, Puja Roy',
+    actors: 'Deba Roy, Sukla Nayek',
   },
   {
     id: 4,
@@ -182,7 +182,7 @@ const productions = [
     synopsis:
       "Kudoram, a destitute man with no ties, one day comes across a funeral bier adorned with flowers while returning home. He takes some of the flowers, lies down on the bier, and falls asleep while thinking of his beloved. Just then, two messengers of Yama arrive to collect the body. Upon reaching the gates of Yama's realm, they realize they have mistakenly brought back a living person instead of the deceased. Once there, Kudoram seizes control of Yama's kingdom by threatening to file a false lawsuit against the Lord of Death. Having lost his job, Yama turns to Vishnu for help; he approaches Brahma and Mahadev one by one, and together they rush to Yamapuri to see the living human being there. What happened next? Did Kuroram stay there, or did he return?",
     actors:
-      'Astik Kumar Naiya, Dulal Adhikari, Barun Kayal, Dipankar Banerjee, Tapan Bhattacharya, Sandip Roy, Sanchayan Ghosh, Sanjoy Das, Prabir Dey, Dinobondhu Naiya, Suman Banerjee, Arko Das, Arkan Banerjee, Shubhasree Dutta, Gracy Chakraborty, Reebeka, Deba Roy.',
+      'Astik Kumar Naiya, Dulal Adhikari, Barun Kayal, Dipankar Banerjee, Anindya Dutta Roy, Tapan Bhattacharya, Sandip Roy, Sanchayan Ghosh, Sanjoy Das, Prabir Dey, Dinobondhu Naiya, Suman Banerjee, Arko Das, Arkan Banerjee, Shubhasree Dutta, Gracy Chakraborty, Reebeka, Deba Roy.',
   },
   {
     id: 16,
@@ -218,7 +218,7 @@ const productions = [
     synopsis:
       "Satyadas—an expert in the art of theft—lives the life of an ordinary man alongside his wife, Kumudini, and their only child, Dharmadas. Although some have suspected his illicit trade, no one has ever managed to catch him; his methods were simply that flawless. Meanwhile, Kumudini refuses to have their child supported by money earned through theft; she wants him to receive an education. To fund his studies, she takes on sewing work in her spare time, in addition to managing all the household chores. Dharma does indeed enroll in a prestigious college, but once there, he gets drawn into college politics and eventually falls into the clutches of a political mafia; meanwhile, this downward spiral in her son's life sparks a conflict between Satya and Dharma, leaving the mother distraught and torn between the two relationships.",
     actors:
-      'Dulal Adhikari, Arkan Banerjee, Dipankar Banerjee, Astik Naiya, Sanjoy Das, Prabir Dey, Gracy Chakraborty, Deba Roy',
+      'Dulal Adhikari, Arkan Banerjee, Dipankar Banerjee, Astik Naiya, Sanjoy Das, Prabir Dey, Goutam Sinha, Gracy Chakraborty, Deba Roy',
   },
   {
     id: 19,

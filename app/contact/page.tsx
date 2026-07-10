@@ -28,6 +28,13 @@ const InstagramIcon = () => (
   </svg>
 )
 
+const YouTubeIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+    <rect width="22" height="16" x="1" y="4" rx="5" ry="5" fill="#FF0000" />
+    <polygon points="9.5,8 9.5,16 16.5,12" fill="#fff" />
+  </svg>
+)
+
 interface JoinFormData {
   name: string
   email: string
@@ -187,7 +194,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <h3 className="text-sm font-bold golden-text-glow dramatic-heading tracking-widest text-center" style={{ marginBottom: '20px' }}>
+          <h3 className="text-sm font-bold golden-text-glow dramatic-heading tracking-widest text-center" style={{ marginBottom: '20px', marginLeft: '1.5rem' }}>
             FOLLOW US
           </h3>
           <div className="flex justify-center gap-12 flex-wrap">
@@ -201,6 +208,11 @@ export default function Contact() {
                 label: 'Instagram',
                 url: 'https://www.instagram.com/jadavpurbaytikram?igsh=MThkaTJmdjBwdmV4eA==',
                 icon: <InstagramIcon />
+              },
+              {
+                label: 'YouTube',
+                url: 'https://youtube.com/@jadavpurbaytikram?si=dlpCLH-0ajKNyGua',
+                icon: <YouTubeIcon />
               },
             ].map(s => (
               <a
