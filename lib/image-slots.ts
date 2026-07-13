@@ -55,13 +55,14 @@ export const IMAGE_SLOTS = {
   'production-12': { label: '2973190', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/12 2973190.jpeg' },
   'production-13': { label: 'Char Akswar', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Char Akswar.jpeg' },
   'production-14': { label: 'Kunda Phooler Mala', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Kunda fuler mala .jpeg' },
-  'production-15': { label: 'Jampuri Jamjamat', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Jampuri Jamjamat.jpeg' },
-  'production-16': { label: 'Le Jhilli', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Le Jhilli.jpeg' },
-  'production-17': { label: 'Durneety Darpan', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Durniti Darpan F 17.jpg.jpeg' },
-  'production-18': { label: 'Mahabidya Adhikontu', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Mahabidha.jpeg' },
-  'production-19': { label: 'Apekhsha', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Apekhha.jpeg' },
-  'production-20': { label: 'E Parobashe', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/E parobashe.jpeg' },
-  'production-21': { label: 'Mon Paboner Nao', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/poster mon paboner nao.jpeg' },
+  'production-15': { label: 'Sharbanggo Sundar', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/SharbanggoSundar2.jpeg' },
+  'production-16': { label: 'Jampuri Jamjamat', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Jampuri Jamjamat.jpeg' },
+  'production-17': { label: 'Le Jhilli', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Le Jhilli.jpeg' },
+  'production-18': { label: 'Durneety Darpan', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Durniti Darpan F 17.jpg.jpeg' },
+  'production-19': { label: 'Mahabidya Adhikontu', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Mahabidha.jpeg' },
+  'production-20': { label: 'Apekhsha', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/Apekhha.jpeg' },
+  'production-21': { label: 'E Parobashe', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/E parobashe.jpeg' },
+  'production-22': { label: 'Mon Paboner Nao', page: 'Productions', fallback: 'https://uivhxj5th4bjhbpl.public.blob.vercel-storage.com/productions/poster mon paboner nao.jpeg' },
 } as const
 
 export type SlotKey = keyof typeof IMAGE_SLOTS
