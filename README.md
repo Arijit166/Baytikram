@@ -11,7 +11,7 @@
 * ☁️ Media upload support via Vercel Blob
 * 📝 Membership form submission that generates a document and stores it in Google Drive
 * 📱 Responsive design for desktop and mobile browsing
-
+ 
 ## 🛠️ Tech Stack
 
 * **Next.js**
